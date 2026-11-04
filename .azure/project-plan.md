@@ -11,7 +11,7 @@ The user approved this scope and the initial recommendations on 2026-11-04.
 ## Brand, domain, and local presence
 
 - Recommended working brand: **SistemGedung**.
-- Domain candidate: **sistemgedung.com**. Availability and trademark status have not been checked; verify before purchase or launch. Alternatives to check: `gedungpro.com` and `aplikasigedung.com`.
+- Domain: **sistemgedung.com**. The user reports purchasing it. DNS, Vercel custom-domain configuration, TLS, and canonical-host redirects still need to be verified after deployment. Trademark status has not been checked.
 - Google Business Profile name: **SistemGedung**, only if it is the real-world business name. Do not add keywords or service descriptions to the business name. Create a profile only if the business meets Google's current eligibility requirements; do not invent an address, phone number, or physical office.
 - Initial service area: Jakarta and surrounding areas.
 

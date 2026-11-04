@@ -19,4 +19,4 @@ Visit `http://localhost:3000`. `npm run build` and `npm run typecheck` validate 
 
 ## Brand and SEO notes
 
-See [Brand and SEO suggestions](docs/brand-seo.md). Domain availability, trademarks, and keyword volumes have not been verified. Use the Google Business Profile name only if it matches the real-world business name and eligibility requirements. Supply verified business contact information before publishing it.
+See [Brand and SEO guidance](docs/brand-seo.md) for the production domain setup, Search Console launch steps, and off-page recommendations. The owner reports purchasing `sistemgedung.com`; DNS and Vercel domain configuration must still be verified. Trademark status and keyword volumes have not been verified. Use the Google Business Profile name only if it matches the real-world business name and eligibility requirements. Supply verified business contact information before publishing it.
