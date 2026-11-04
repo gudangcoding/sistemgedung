@@ -3,42 +3,271 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/eyebrow";
 import { serviceImages } from "@/lib/media";
+import {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  serializeJsonLd,
+  siteDescription,
+  siteName,
+  siteOrigin,
+} from "@/lib/site";
+
+const servicePath = "/layanan/software";
+const pageTitle = "Jasa Pembuatan Aplikasi Manajemen Gedung";
+const pageDescription =
+  "Jasa pembuatan aplikasi web dan mobile untuk manajemen gedung dan apartemen. Kelola tenant, IPL, keluhan, work order, aset, dan maintenance.";
+
+const faqs = [
+  {
+    question: "Apakah SistemGedung membuat aplikasi manajemen gedung dari nol?",
+    answer:
+      "Kebutuhan dapat dimulai dari aplikasi building management yang sudah live dan disesuaikan melalui setup atau white-label, maupun pembahasan modul dan alur khusus. Ruang lingkup pengembangan, integrasi, dan estimasi dibicarakan setelah kebutuhan gedung dipetakan.",
+  },
+  {
+    question: "Fitur apa yang bisa digunakan untuk mengelola apartemen?",
+    answer:
+      "Aplikasi mencakup alur tenant dan unit, tagihan IPL, keluhan dan work order, aset, preventive maintenance, portal tenant, portal admin, serta pekerjaan tim engineering. Modul yang digunakan mengikuti paket dan kebutuhan operasional.",
+  },
+  {
+    question: "Apakah tersedia aplikasi web dan mobile?",
+    answer:
+      "SistemGedung menyediakan aplikasi building management berbasis web serta aplikasi Android untuk kebutuhan tenant dan tim support. Aplikasi Android saat ini melalui closed testing, sehingga email tester perlu didaftarkan sebelum mengunduh dari Google Play.",
+  },
+  {
+    question: "Bagaimana menentukan biaya pembuatan atau implementasi aplikasi?",
+    answer:
+      "Biaya bergantung pada jumlah gedung, modul, kebutuhan server, migrasi data, integrasi, white-label, dan dukungan yang dipilih. Harga paket aplikasi yang tersedia dapat dilihat di halaman harga; kebutuhan di luar paket perlu dibahas untuk memperoleh ruang lingkup dan estimasi tersendiri.",
+  },
+  {
+    question: "Bagaimana proses implementasi untuk gedung atau apartemen?",
+    answer:
+      "Proses dimulai dengan diskusi alur kerja dan demo, dilanjutkan pemetaan kebutuhan, penyiapan aplikasi, migrasi dan verifikasi data bila diperlukan, training, lalu pendampingan saat mulai digunakan. Tahapan dan jadwal disepakati sesuai ruang lingkup.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Aplikasi Building Management",
-  description: "Jasa pengembangan aplikasi building management custom untuk pengelola apartemen dan gedung perkantoran, mencakup tenant, work order, aset, dan maintenance.",
-  alternates: { canonical: "/layanan/software" },
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    "jasa pembuatan aplikasi manajemen gedung",
+    "jasa pembuatan aplikasi apartemen",
+    "aplikasi web manajemen gedung",
+    "aplikasi mobile manajemen apartemen",
+    "jasa pembuatan aplikasi building management",
+  ],
+  alternates: { canonical: servicePath },
   openGraph: {
-    title: "Jasa Pembuatan Aplikasi Building Management",
-    description: "Jasa pengembangan aplikasi building management custom untuk pengelola apartemen dan gedung perkantoran, mencakup tenant, work order, aset, dan maintenance.",
-    url: "/layanan/software",
-    images: [{ url: serviceImages.software, width: 1200, height: 630, alt: "Pengembangan aplikasi building management SistemGedung" }],
+    title: pageTitle,
+    description: pageDescription,
+    type: "website",
+    url: servicePath,
+    images: [
+      {
+        url: serviceImages.software,
+        width: 1200,
+        height: 630,
+        alt: "Jasa pembuatan aplikasi web dan mobile manajemen gedung SistemGedung",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: [serviceImages.software],
+  },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteOrigin}${servicePath}/#service`,
+  name: pageTitle,
+  serviceType: "Pengembangan aplikasi web dan mobile manajemen gedung dan apartemen",
+  description: pageDescription,
+  url: `${siteOrigin}${servicePath}`,
+  provider: { "@id": `${siteOrigin}/#organization` },
+  areaServed: { "@type": "Country", name: "Indonesia" },
+  audience: { "@type": "BusinessAudience", audienceType: "Pengelola gedung dan apartemen" },
 };
 
 export default function SoftwareServicePage() {
   return (
-    <section className="inner-hero">
-      <div className="container">
-        <Eyebrow>PENGEMBANGAN SOFTWARE</Eyebrow>
-        <h1>Aplikasi manajemen gedung<br /><span>yang mengikuti proses Anda.</span></h1>
-        <p className="inner-lead">Rancang alur digital untuk tenant, pengelola, dan tim engineering—berdasarkan kebutuhan operasional yang dibahas bersama.</p>
-        <div className="page-visual">
-          <Image
-            src={serviceImages.software}
-            alt="Ilustrasi pengembangan aplikasi building management custom"
-            width={1200}
-            height={630}
-            sizes="(max-width: 1180px) 100vw, 1180px"
-          />
+    <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(
+            breadcrumbJsonLd([
+              { name: "Beranda", path: "/" },
+              { name: "Layanan", path: servicePath },
+            ]),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd(faqs)) }}
+      />
+
+      <section className="inner-hero">
+        <div className="container">
+          <div className="article-breadcrumb">
+            <Link href="/">Beranda</Link><span>/</span><span>Layanan aplikasi</span>
+          </div>
+          <Eyebrow>APLIKASI BUILDING MANAGEMENT</Eyebrow>
+          <h1>Jasa pembuatan aplikasi web &amp; mobile untuk manajemen gedung dan apartemen.</h1>
+          <p className="inner-lead">
+            Hubungkan pekerjaan pengelola, tenant, dan tim engineering dalam satu sistem: mulai dari
+            data unit dan tagihan IPL hingga keluhan, work order, aset, dan pemeliharaan. Coba demo
+            aplikasi yang sudah live, lalu bahas setup, white-label, atau modul yang sesuai proses
+            properti Anda.
+          </p>
+          <div className="page-visual">
+            <Image
+              src={serviceImages.software}
+              alt="Ilustrasi aplikasi web building management untuk pengelola gedung dan apartemen"
+              width={1200}
+              height={630}
+              sizes="(max-width: 1180px) 100vw, 1180px"
+              priority
+            />
+          </div>
+          <div className="go-live-actions">
+            <Link className="button button-dark" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
+            <Link className="text-link" href="/harga">Lihat paket dan harga <span>→</span></Link>
+          </div>
         </div>
-        <Link className="button button-dark" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
-        <div className="inner-feature-grid">
-          {[["Keluhan & layanan", "Pencatatan permintaan, klasifikasi, penugasan, serta pelacakan status."], ["Aset & pemeliharaan", "Pengelolaan informasi aset dan jadwal perawatan preventif."], ["Portal sesuai peran", "Ruang kerja admin, tenant, dan teknisi dengan kebutuhan yang berbeda."]].map(([title, text], i) => (
-            <article key={title}><span>0{i + 1}</span><h2>{title}</h2><p>{text}</p></article>
-          ))}
+      </section>
+
+      <section className="section capability-section">
+        <div className="container">
+          <div className="section-heading">
+            <div><Eyebrow>CAKUPAN APLIKASI</Eyebrow><h2>Kelola alur utama<br /><span>properti Anda.</span></h2></div>
+            <p>Gunakan modul yang relevan untuk properti dan tim Anda; kebutuhan tambahan dibahas sebelum implementasi.</p>
+          </div>
+          <div className="capability-grid">
+            {[
+              ["Tenant, unit & IPL", "Kelola informasi penghuni dan unit serta alur tagihan IPL sesuai konfigurasi gedung."],
+              ["Keluhan & work order", "Catat permintaan, tetapkan tindak lanjut, dan pantau status pekerjaan dalam alur yang lebih mudah ditelusuri."],
+              ["Aset & maintenance", "Hubungkan data aset, pekerjaan teknisi, dan jadwal preventive maintenance."],
+              ["Portal tenant", "Berikan kanal bagi penghuni untuk menyampaikan permintaan, melihat informasi, dan mengikuti status penanganan."],
+              ["Ruang kerja admin", "Bantu tim pengelola meninjau tiket, tenant, aset, dan aktivitas operasional."],
+              ["Aplikasi mobile", "Dukung kebutuhan tenant dan tim lapangan melalui aplikasi Android; akses saat ini menggunakan closed testing."],
+            ].map(([title, text], index) => (
+              <article className="capability-card" key={title}>
+                <span className="card-number">0{index + 1} / 06</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="section tech-section">
+        <div className="container">
+          <div className="section-heading">
+            <div><Eyebrow>WEB, MOBILE &amp; PENYESUAIAN</Eyebrow><h2>Mulai dari kebutuhan,<br /><span>bukan sekadar daftar fitur.</span></h2></div>
+            <p>Gunakan demo untuk menilai alur yang sudah tersedia sebelum menentukan apa yang perlu dikonfigurasi atau dikembangkan.</p>
+          </div>
+          <div className="tech-grid">
+            <article className="tech-card">
+              <span>Aplikasi web</span>
+              <p>Ruang kerja berbasis web untuk pengelola dan admin yang perlu meninjau data operasional gedung.</p>
+            </article>
+            <article className="tech-card">
+              <span>Aplikasi Android</span>
+              <p>Aplikasi tenant dan support tersedia untuk diuji melalui Google Play closed testing setelah email didaftarkan.</p>
+            </article>
+            <article className="tech-card">
+              <span>Setup &amp; white-label</span>
+              <p>Bahas penyesuaian identitas aplikasi, konfigurasi, migrasi data, training, dan dukungan teknisi sesuai paket.</p>
+            </article>
+            <article className="tech-card">
+              <span>Modul atau integrasi khusus</span>
+              <p>Petakan kebutuhan yang belum tercakup untuk menentukan prioritas, keterkaitan sistem, dan estimasi pekerjaan.</p>
+            </article>
+          </div>
+          <p className="pricing-term">
+            Ketersediaan modul dan ruang lingkup penyesuaian dikonfirmasi saat diskusi.{" "}
+            <Link href="/solusi/apartemen">Lihat solusi untuk apartemen</Link> atau{" "}
+            <Link href="/artikel/jasa-pembuatan-aplikasi-building-management">baca panduan memilih layanan</Link>.
+          </p>
+        </div>
+      </section>
+
+      <section className="section go-live-section">
+        <div className="container">
+          <div className="section-heading go-live-heading">
+            <div><Eyebrow>TAHAP IMPLEMENTASI</Eyebrow><h2>Alur kerja jelas<br /><span>sebelum mulai go-live.</span></h2></div>
+            <p>Ruang lingkup, tanggung jawab, dan jadwal dibahas bersama agar implementasi sesuai kesiapan data dan tim.</p>
+          </div>
+          <div className="go-live-grid">
+            {[
+              ["01", "Diskusi & demo", "Petakan jenis properti, peran pengguna, alur kerja, dan modul prioritas."],
+              ["02", "Pemetaan solusi", "Tentukan apakah kebutuhan cocok dengan konfigurasi, white-label, atau pengembangan khusus."],
+              ["03", "Persiapan data & pengguna", "Rencanakan migrasi dan verifikasi data serta training untuk admin dan tim operasional."],
+              ["04", "Implementasi & evaluasi", "Sepakati peluncuran, dukungan, dan tindak lanjut berdasarkan hasil penggunaan."],
+            ].map(([number, title, text]) => (
+              <article className="go-live-step" key={number}>
+                <span>{number}</span><h3>{title}</h3><p>{text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="go-live-actions">
+            <Link className="button button-dark" href="/demo">Jadwalkan diskusi <span>↗</span></Link>
+            <Link className="text-link" href="/berita/memilih-vendor-aplikasi-building-management">Panduan memilih vendor <span>→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section faq-section" id="faq">
+        <div className="container faq-layout">
+          <div>
+            <Eyebrow>PERTANYAAN UMUM</Eyebrow>
+            <h2>Hal yang perlu<br /><span>diketahui sebelum memilih.</span></h2>
+            <p>Perlu membahas fitur atau kesiapan implementasi gedung Anda?</p>
+            <Link className="text-link" href="/demo">Diskusikan kebutuhan <span>→</span></Link>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <details key={faq.question}>
+                <summary>{faq.question}<span>＋</span></summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section final-cta-section">
+        <div className="container final-cta-layout">
+          <div>
+            <Eyebrow>LANGKAH BERIKUTNYA</Eyebrow>
+            <h2>Lihat alurnya,<br /><span>baru tentukan solusinya.</span></h2>
+            <p>{siteDescription}</p>
+            <div className="go-live-actions">
+              <Link className="button button-lime" href="/demo">Minta demo &amp; konsultasi <span>↗</span></Link>
+              <Link className="text-link light-link" href="/harga">Bandingkan paket <span>→</span></Link>
+            </div>
+            <div>
+              <Eyebrow>DISKUSI AWAL</Eyebrow>
+              <h3>Ruang lingkup yang dibahas</h3>
+              <ul className="final-cta-points">
+                <li>Jumlah gedung, unit, dan peran pengguna</li>
+                <li>Modul yang dipakai dan alur yang perlu disesuaikan</li>
+                <li>Kebutuhan migrasi data, integrasi, dan dukungan</li>
+              </ul>
+              <Link className="text-link" href="/solusi/apartemen">Lihat solusi apartemen <span>→</span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
   );
 }

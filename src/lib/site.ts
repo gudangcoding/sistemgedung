@@ -3,8 +3,8 @@ const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 export const siteUrl = new URL(configuredSiteUrl || "https://sistemgedung.com");
 export const siteOrigin = siteUrl.origin;
 export const siteName = "SistemGedung";
-export const siteTitle = "SistemGedung — Aplikasi Manajemen Gedung";
-export const homeUrl = "https://www.sistemgedung.com/";
+export const siteTitle = "Software Building Management Indonesia | SistemGedung";
+export const homeUrl = `${siteOrigin}/`;
 export const demoAppUrl =
   process.env.NEXT_PUBLIC_DEMO_APP_URL?.trim() || "https://bm.gudangcoding.my.id/login";
 
@@ -14,7 +14,7 @@ export const playStoreLinks = {
 } as const;
 
 export const siteDescription =
-  "SistemGedung membantu pengelola apartemen dan gedung perkantoran mengelola tenant, keluhan, aset, dan pemeliharaan melalui aplikasi building management yang dapat disesuaikan.";
+  "Kelola tenant, IPL, keluhan, aset, dan maintenance apartemen & gedung perkantoran dalam satu software building management Indonesia. Jadwalkan demo gratis.";
 
 export const contentPublishedAt = "2026-01-10T08:00:00+07:00";
 export const contentUpdatedAt = "2026-10-01T08:00:00+07:00";
@@ -43,6 +43,43 @@ export const websiteJsonLd = {
   url: siteOrigin,
   inLanguage: "id-ID",
   publisher: { "@id": `${siteOrigin}/#organization` },
+};
+
+export const softwareApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${siteOrigin}/#software`,
+  name: `${siteName} — Software Building Management`,
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Property Management Software",
+  operatingSystem: "Web, Android",
+  url: siteOrigin,
+  description: siteDescription,
+  inLanguage: "id-ID",
+  image: `${siteOrigin}/images/brand/logo-512.png`,
+  screenshot: [`${siteOrigin}/images/apps/support-maintenance.webp`, `${siteOrigin}/images/apps/tenant.webp`],
+  featureList: [
+    "Manajemen tenant dan unit",
+    "Tagihan IPL dan pembayaran",
+    "Keluhan dan work order",
+    "Aset dan preventive maintenance",
+    "Portal tenant dan teknisi",
+    "Laporan operasional gedung",
+  ],
+  publisher: { "@id": `${siteOrigin}/#organization` },
+  offers: {
+    "@type": "Offer",
+    url: `${siteOrigin}/harga`,
+    price: "2000000",
+    priceCurrency: "IDR",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "2000000",
+      priceCurrency: "IDR",
+      unitText: "MONTH",
+    },
+  },
 };
 
 export type ArticleJsonLdInput = {

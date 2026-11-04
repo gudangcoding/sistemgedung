@@ -10,6 +10,7 @@ import {
   siteName,
   siteTitle,
   siteUrl,
+  softwareApplicationJsonLd,
   websiteJsonLd,
 } from "@/lib/site";
 
@@ -26,8 +27,11 @@ export const metadata: Metadata = {
   publisher: siteName,
   category: "Building management software",
   keywords: [
+    "software building management Indonesia",
     "aplikasi building management",
+    "aplikasi kelola apartemen",
     "aplikasi manajemen gedung",
+    "sistem operasional gedung",
     "software pengelola apartemen",
     "sistem manajemen apartemen",
     "aplikasi tenant gedung",
@@ -81,6 +85,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(softwareApplicationJsonLd) }} />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

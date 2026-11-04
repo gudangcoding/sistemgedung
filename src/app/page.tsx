@@ -6,11 +6,11 @@ import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { bundlePlans } from "@/content/pricing";
 import { appImages, beritaImage } from "@/lib/media";
-import { demoAppUrl, faqJsonLd, playStoreLinks, serializeJsonLd } from "@/lib/site";
+import { demoAppUrl, faqJsonLd, playStoreLinks, serializeJsonLd, siteDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Aplikasi Building Management",
-  description: "SistemGedung membantu pengelola apartemen dan perkantoran mengelola tenant, IPL, keluhan, aset, dan maintenance dalam aplikasi building management.",
+  title: "Software Building Management Indonesia",
+  description: siteDescription,
   alternates: { canonical: "/" },
 };
 

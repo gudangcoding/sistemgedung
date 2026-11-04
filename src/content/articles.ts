@@ -68,14 +68,13 @@ export const articles: Article[] = [
   {
     slug: "jasa-pembuatan-aplikasi-building-management",
     category: "PENGEMBANGAN SISTEM",
-    title: "Jasa pembuatan aplikasi building management: memilih vendor dan merencanakan sistem",
+    title: "Panduan memilih vendor aplikasi building management",
     summary: "Hal yang perlu dievaluasi saat mencari software building management system Indonesia untuk apartemen, kantor, atau properti multi-lokasi.",
     readTime: "7 menit",
     keywords: [
-      "jasa pembuatan aplikasi building management",
+      "panduan memilih vendor aplikasi building management",
       "software building management system Indonesia",
-      "jasa pembuat aplikasi pengelola gedung",
-      "developer property management system",
+      "vendor software pengelola gedung",
       "aplikasi manajemen apartemen custom",
       "vendor aplikasi building management",
     ],
