@@ -5,7 +5,7 @@ import { articles } from "@/content/articles";
 
 export const metadata: Metadata = {
   title: "Artikel Manajemen Gedung",
-  description: "Panduan evergreen tentang aplikasi building management, layanan tenant, preventive maintenance, dan pengelolaan aset.",
+  description: "Panduan memilih jasa dan aplikasi building management, pengelolaan apartemen, IPL, meter utilitas, ticketing tenant, dan maintenance gedung.",
   alternates: { canonical: "/artikel" },
 };
 

@@ -46,6 +46,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section home-pricing">
+        <div className="container home-pricing-layout">
+          <div><Eyebrow>PAKET SEWA & DUKUNGAN</Eyebrow><h2>Mulai dari lingkup<br />yang sesuai kebutuhan.</h2><p>Lisensi aplikasi, server terkelola, dan dukungan dalam pilihan paket bulanan.</p></div>
+          <div className="home-pricing-summary"><span>Estimasi awal Basic</span><strong>Rp3.900.000<small> / bulan</small></strong><p>Untuk 1 properti hingga 100 unit. Angka awal menunggu validasi beban dan biaya.</p><Link className="button button-dark" href="/harga">Bandingkan paket <span>↗</span></Link></div>
+        </div>
+      </section>
+
       <section className="split-section">
         <div className="split-art"><div className="building-illustration"><div className="building-top"><span /><span /></div><div className="building-body"><div className="building-grid">{Array.from({ length: 18 }, (_, i) => <i key={i} />)}</div></div><div className="building-base" /></div><span className="art-caption">SYSTEMS THAT SUPPORT<br />REAL BUILDING OPERATIONS</span></div>
         <div className="split-copy"><Eyebrow>DUA JALUR, SATU TUJUAN</Eyebrow><h2>Teknologi yang memahami cara gedung bekerja.</h2><p>Kolaborasikan pengembangan aplikasi khusus dengan dukungan proses operasional. Mulai dari pemetaan alur sampai pengelolaan layanan sehari-hari.</p><div className="service-links"><Link href="/layanan/software"><span>01</span><b>Pengembangan software</b><i>↗</i></Link><Link href="/layanan/operasional"><span>02</span><b>Dukungan operasional</b><i>↗</i></Link></div></div>

@@ -1,5 +1,7 @@
 # Project Plan: SistemGedung
 
+**Status: Approved**
+
 ## Approved scope
 
 Create a Next.js website and building-management application for a business serving Jakarta and nearby areas. The business offers custom building-management software development and operational building-management services. The product serves apartment and office-building operators, tenants, and engineering technicians.
@@ -15,15 +17,36 @@ The user approved this scope and the initial recommendations on 2026-11-04.
 
 ## Search and content strategy
 
-Target Indonesian search intent with these unverified keyword candidates:
+Target Indonesian search intent with these unverified keyword candidates supplied by the user. Organize content by distinct search intent; do not make unsupported claims about volume, competition, or ranking:
 
-1. aplikasi building management
-2. aplikasi manajemen gedung
-3. software building management
-4. aplikasi pengelolaan gedung
-5. aplikasi pengelolaan apartemen
-6. aplikasi maintenance gedung
-7. aplikasi facility management
+### Commercial / vendor intent
+
+- jasa pembuatan aplikasi building management
+- software building management system Indonesia
+- jasa pembuat aplikasi pengelola gedung
+- developer property management system
+- aplikasi manajemen apartemen custom
+- vendor aplikasi building management
+- jasa pembuatan aplikasi manajemen apartemen
+- software pengelola apartemen Indonesia
+- aplikasi P3SRS apartemen custom
+- developer sistem tagihan IPL apartemen
+- vendor software apartemen dan kondominium
+
+### Cost and feature intent
+
+- biaya pembuatan aplikasi manajemen gedung
+- aplikasi IPL dan iuran apartemen berbasis web
+- software tenant & maintenance management gedung
+- jasa buat sistem ticketing perawatan gedung
+- aplikasi pengelolaan gedung perkantoran dan mall
+- aplikasi pencatatan meteran air dan listrik apartemen
+- sistem cetak invoice dan IPL apartemen otomatis
+- aplikasi komplain dan ticketing penghuni apartemen
+- biaya pembuatan aplikasi mobile tenant apartemen
+- software absensi & gate pass pengunjung apartemen
+
+Create separate evergreen articles to address vendor selection, cost components, and apartment operations (IPL, utility meters, complaints, visitor access, and fit-out). Use phrases naturally in useful copy, metadata keywords, and internal links; do not create thin pages for every phrase. Do not promise compliance or integrations unless verified.
 
 Do not claim search-volume rankings or numbers without current keyword research. Validate demand and competition using Google Keyword Planner and later Search Console. Use clear, helpful landing pages for service and audience intent, with natural terminology rather than keyword stuffing.
 
@@ -51,6 +74,22 @@ Each article should have a useful, factual body, descriptive title, metadata, ca
 - Solution pages for apartments and office buildings.
 - Static article index and article detail pages.
 - Contact/demo request form. Until supplied, do not fabricate contact details.
+
+## Application rental and support pricing (approved update)
+
+Publish original, clearly labeled configurable launch estimates for application rental, managed server, and support. These are initial estimates pending business cost/load validation, not verified market rates. Availability, final sizing, scope, and commercial terms must be confirmed before contract; do not imply guaranteed uptime or resolution times.
+
+All three monthly packages include a building-management application license and SSL, with a minimum 12-month term:
+
+- **Basic — Rp3.900.000/month:** 1 property, up to 100 units; managed application server 4 GB RAM / 80 GB SSD; managed PostgreSQL allocation sized after onboarding; daily backups; weekday remote support with next-business-day response target; one remote onboarding session; application updates.
+- **Growth — Rp6.900.000/month:** up to 3 properties / 400 units; managed application server 8 GB RAM / 160 GB SSD; daily backups; priority remote support with a 4-business-hour response target; 2 onsite visits per month, 4 hours each, within the Jakarta area; 2 training sessions.
+- **Enterprise — Rp12.900.000/month:** up to 10 properties / 1,500 units; managed application server 16 GB RAM / 300 GB SSD; daily backups and a quarterly restore test; critical-support 2-business-hour response target; 4 onsite visits per month within the Jakarta area; dedicated onboarding.
+
+Display support business hours as the proposed service window, Monday–Friday, 09.00–17.00 WIB, excluding public holidays; final hours and terms must be agreed in writing. Response targets are acknowledgements/initial response, not resolution-time guarantees or uptime SLAs. Clearly state how requests outside business hours are handled and that Jakarta-area onsite travel scope is limited to the agreed Jakarta service area.
+
+Separate estimate add-ons: managed server-only from Rp1.500.000/month (final sizing after assessment); an extra onsite visit Rp750.000 per 4-hour session within the Jakarta area; remote training Rp1.250.000 per 2-hour session; migration and custom modules quoted after assessment. Overage, extra server resources, custom features, domains, and third-party charges are quoted separately.
+
+Pricing page must disclose that all figures are initial configurable estimates pending cost/load validation, not verified market rates. Before agreement, clarify applicable taxes, PostgreSQL inclusion/scope and sizing (Basic allocation is sized after onboarding), backup-retention details, property/unit overages, onsite travel beyond Jakarta, billing/payment terms, and any third-party costs. Provide a package-specific CTA to the existing request form; do not fabricate contact data.
 
 ## Application modules
 

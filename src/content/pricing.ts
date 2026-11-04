@@ -1,0 +1,62 @@
+export const pricingPlans = [
+  {
+    id: "basic",
+    name: "Basic",
+    price: "Rp3.900.000",
+    summary: "Untuk satu properti yang ingin memulai pengelolaan digital.",
+    capacity: "1 properti · maksimal 100 unit",
+    server: "Server aplikasi terkelola · 4 GB RAM / 80 GB SSD",
+    features: [
+      "Lisensi aplikasi building management",
+      "Alokasi PostgreSQL terkelola, disesuaikan setelah onboarding",
+      "Backup harian",
+      "SSL",
+      "Dukungan remote hari kerja · target respons hari kerja berikutnya",
+      "1 sesi onboarding remote",
+      "Pembaruan aplikasi",
+    ],
+    action: "Diskusikan Basic",
+  },
+  {
+    id: "growth",
+    name: "Growth",
+    price: "Rp6.900.000",
+    summary: "Untuk portofolio beberapa properti dengan dukungan lebih prioritas.",
+    capacity: "Maksimal 3 properti · total maksimal 400 unit",
+    server: "Server aplikasi terkelola · 8 GB RAM / 160 GB SSD",
+    features: [
+      "Lisensi aplikasi building management",
+      "Backup harian",
+      "SSL",
+      "Dukungan remote prioritas · target respons 4 jam kerja",
+      "2 kunjungan onsite per bulan · masing-masing 4 jam, area Jakarta",
+      "2 sesi training",
+    ],
+    action: "Diskusikan Growth",
+    featured: true,
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise",
+    price: "Rp12.900.000",
+    summary: "Untuk kebutuhan multi-properti dengan pendampingan khusus.",
+    capacity: "Maksimal 10 properti · total maksimal 1.500 unit",
+    server: "Server aplikasi terkelola · 16 GB RAM / 300 GB SSD",
+    features: [
+      "Lisensi aplikasi building management",
+      "Backup harian dan uji pemulihan data setiap kuartal",
+      "SSL",
+      "Dukungan insiden kritis · target respons 2 jam kerja",
+      "4 kunjungan onsite per bulan dalam area Jakarta",
+      "Onboarding khusus",
+    ],
+    action: "Diskusikan Enterprise",
+  },
+] as const;
+
+export const pricingAddons = [
+  { name: "Server terkelola saja", price: "Mulai Rp1.500.000/bulan", note: "Ukuran final ditentukan setelah asesmen kebutuhan." },
+  { name: "Kunjungan onsite tambahan", price: "Rp750.000/sesi 4 jam", note: "Berlaku untuk area Jakarta." },
+  { name: "Training remote", price: "Rp1.250.000/sesi 2 jam", note: "Jadwal dan peserta disepakati saat pemesanan." },
+  { name: "Migrasi data atau modul khusus", price: "Berdasarkan asesmen", note: "Ruang lingkup dan estimasi biaya dibahas terlebih dahulu." },
+] as const;
