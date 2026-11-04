@@ -198,6 +198,12 @@ export default function SoftwareServicePage() {
             <Link href="/solusi/apartemen">Lihat solusi untuk apartemen</Link> atau{" "}
             <Link href="/artikel/jasa-pembuatan-aplikasi-building-management">baca panduan memilih layanan</Link>.
           </p>
+          <div className="feature-related-links">
+            <Link className="text-link" href="/fitur/tagihan-ipl-apartemen">Aplikasi tagihan IPL apartemen <span>→</span></Link>
+            <Link className="text-link" href="/fitur/pencatatan-meter-gedung">Software pencatatan meter air dan listrik <span>→</span></Link>
+            <Link className="text-link" href="/fitur/keluhan-penghuni-apartemen">Sistem komunikasi keluhan penghuni <span>→</span></Link>
+            <Link className="text-link" href="/sewa-aplikasi-manajemen-gedung">Sewa aplikasi web manajemen gedung <span>→</span></Link>
+          </div>
         </div>
       </section>
 

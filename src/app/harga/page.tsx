@@ -4,12 +4,12 @@ import { Eyebrow } from "@/components/eyebrow";
 import { applicationPlans, bundlePlans, serverPlans, supportPlans } from "@/content/pricing";
 
 export const metadata: Metadata = {
-  title: "Harga Sewa Aplikasi Building Management",
-  description: "Bandingkan estimasi sewa aplikasi building management per gedung, paket aplikasi dan VPS, serta dukungan teknisi.",
+  title: "Rincian Harga Paket Aplikasi, VPS & Support Gedung",
+  description: "Lihat estimasi harga lisensi aplikasi building management, VPS, paket lengkap, dan dukungan teknisi beserta ketentuan penggunaannya.",
   alternates: { canonical: "/harga" },
   openGraph: {
-    title: "Harga Sewa Aplikasi Building Management",
-    description: "Bandingkan estimasi sewa aplikasi building management per gedung, paket aplikasi dan VPS, serta dukungan teknisi.",
+    title: "Rincian Harga Paket Aplikasi, VPS & Support Gedung",
+    description: "Lihat estimasi harga lisensi aplikasi building management, VPS, paket lengkap, dan dukungan teknisi beserta ketentuan penggunaannya.",
     url: "/harga",
   },
 };
@@ -20,8 +20,9 @@ export default function PricingPage() {
       <section className="pricing-hero">
         <div className="container">
           <Eyebrow>HARGA APLIKASI & LAYANAN</Eyebrow>
-          <h1>Pilih layanan.<br /><span>Atur sesuai kebutuhan gedung.</span></h1>
-          <p className="pricing-intro">Sewa aplikasi building management untuk satu atau beberapa gedung, tambahkan VPS dan dukungan teknisi secara terpisah, atau pilih paket lengkap.</p>
+          <h1>Rincian harga.<br /><span>Pilih paket sesuai kebutuhan.</span></h1>
+          <p className="pricing-intro">Bandingkan estimasi lisensi aplikasi, VPS, dukungan teknisi, dan paket lengkap untuk kebutuhan pengelolaan gedung.</p>
+          <p className="pricing-term"><Link href="/sewa-aplikasi-manajemen-gedung">Lihat halaman sewa aplikasi web manajemen gedung</Link> untuk informasi lisensi dan demo.</p>
           <div className="pricing-estimate" role="note"><b>Estimasi awal · perlu konfirmasi sebelum berlangganan</b><span>Harga di halaman ini adalah estimasi yang Anda pilih untuk rancangan paket. Kapasitas, pajak, biaya provider, kebutuhan unit/pengguna, dan ruang lingkup akhir dikonfirmasi melalui asesmen; harga bukan tarif pasar terverifikasi.</span></div>
           <nav className="pricing-jump-links" aria-label="Navigasi paket harga">
             <a href="#sewa-aplikasi">Sewa aplikasi</a><a href="#paket-lengkap">Paket lengkap</a><a href="#support">Support teknisi</a><a href="#vps">VPS</a>
