@@ -8,6 +8,11 @@ export const homeUrl = "https://www.sistemgedung.com/";
 export const demoAppUrl =
   process.env.NEXT_PUBLIC_DEMO_APP_URL?.trim() || "https://bm.gudangcoding.my.id/login";
 
+export const playStoreLinks = {
+  support: "https://play.google.com/store/apps/details?id=com.apsyst.cra",
+  tenant: "https://play.google.com/store/apps/details?id=com.apsyst.tenant",
+} as const;
+
 export const siteDescription =
   "SistemGedung membantu pengelola apartemen dan gedung perkantoran mengelola tenant, keluhan, aset, dan pemeliharaan melalui aplikasi building management yang dapat disesuaikan.";
 

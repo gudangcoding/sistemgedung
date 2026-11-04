@@ -27,7 +27,7 @@ export function SiteHeader() {
           <div className="mobile-menu">
             <a href={homeUrl}>Home</a><Link href="/#layanan">Layanan</Link><Link href="/#keunggulan">Keunggulan</Link><Link href="/#teknologi">Teknologi</Link>
             <Link href="/#proses">Proses</Link><Link href="/harga">Paket & harga</Link><Link href="/berita">Berita</Link>
-            <Link href="/#faq">FAQ</Link><Link href="/demo">Diskusikan kebutuhan</Link>
+            <Link href="/#faq">FAQ</Link><Link href="/#aplikasi">Aplikasi Android</Link><Link href="/demo">Diskusikan kebutuhan</Link>
             <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a>
           </div>
         </details>

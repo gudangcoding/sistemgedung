@@ -5,8 +5,8 @@ import { DemoForm } from "@/components/demo-form";
 import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { bundlePlans } from "@/content/pricing";
-import { beritaImage } from "@/lib/media";
-import { demoAppUrl, faqJsonLd, serializeJsonLd } from "@/lib/site";
+import { appImages, beritaImage } from "@/lib/media";
+import { demoAppUrl, faqJsonLd, playStoreLinks, serializeJsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Jasa Pembuatan Aplikasi Building Management",
@@ -101,6 +101,27 @@ const liveDemos = [
   { tag: "CUSTOM", title: "Aplikasi Custom", text: "POS, inventory, ERP, absensi, dan integrasi sesuai alur kerja.", href: "/demo?paket=custom", action: "Diskusikan kebutuhan" },
   { tag: "WHITE-LABEL", title: "Rebrand Jadi Milik Anda", text: "Logo, warna, nama aplikasi, dan domain perusahaan sendiri.", href: "/demo?paket=custom", action: "Diskusikan white-label" },
   { tag: "SUPPORT", title: "Teknisi Onsite", text: "Instalasi, training, dan troubleshooting hingga 20x per bulan.", href: "/harga#support", action: "Lihat paket support" },
+];
+
+const mobileApps = [
+  {
+    label: "SUPPORT ENGINEERING",
+    title: "CRA Support",
+    text: "Aplikasi support maintenance untuk tim engineering menangani work order, aset, jadwal pemeliharaan, dan laporan dari lapangan.",
+    image: appImages.support,
+    alt: "Pratinjau aplikasi CRA Support untuk tim maintenance gedung",
+    href: playStoreLinks.support,
+    points: ["Work order & jadwal", "Aset & preventive maintenance", "Laporan dari lapangan"],
+  },
+  {
+    label: "PORTAL PENGHUNI",
+    title: "Tenant App",
+    text: "Aplikasi untuk penghuni mengirim permintaan, memantau status, melihat tagihan, dan menerima informasi gedung.",
+    image: appImages.tenant,
+    alt: "Pratinjau aplikasi Tenant App untuk penghuni apartemen",
+    href: playStoreLinks.tenant,
+    points: ["Permintaan & keluhan", "Tagihan IPL", "Pengumuman gedung"],
+  },
 ];
 
 const supportTypes = [
@@ -268,6 +289,28 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section app-download-section" id="aplikasi">
+        <div className="container">
+          <div className="section-heading"><div><Eyebrow>APLIKASI ANDROID</Eyebrow><h2>Download aplikasi<br /><span>support &amp; tenant.</span></h2></div><p>Kedua aplikasi masih dalam pengujian tertutup. Daftarkan email Anda terlebih dahulu agar bisa mengunduh dan mencoba lewat Google Play.</p></div>
+          <div className="app-download-grid">
+            {mobileApps.map((app) => (
+              <article className="app-download-card" key={app.title}>
+                <div className="app-download-media"><Image src={app.image} alt={app.alt} width={1200} height={760} sizes="(max-width: 760px) 100vw, 50vw" /></div>
+                <div className="app-download-body">
+                  <span className="app-download-label">{app.label}</span>
+                  <h3>{app.title}</h3>
+                  <p>{app.text}</p>
+                  <ul>{app.points.map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
+                  <a className="button button-dark" href={app.href} target="_blank" rel="noopener noreferrer">Buka di Google Play <span>↗</span></a>
+                  <p className="app-download-note">Closed testing — email tester wajib terdaftar sebelum mengunduh.</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="app-download-help"><p><strong>Belum terdaftar sebagai tester?</strong> Isi email pada formulir uji coba. Setelah email ditambahkan, unduh aplikasi melalui tombol Google Play di atas.</p><Link href="/demo">Daftarkan email uji coba <span>→</span></Link></div>
         </div>
       </section>
 

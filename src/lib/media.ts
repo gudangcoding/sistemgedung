@@ -13,5 +13,10 @@ export const serviceImages = {
   operasional: "/images/layanan/operasional.webp",
 } as const;
 
+export const appImages = {
+  support: "/images/apps/support-maintenance.webp",
+  tenant: "/images/apps/tenant.webp",
+} as const;
+
 export const brandLogo = "/logo.svg";
 export const brandLogoPng = "/images/brand/logo-512.png";
