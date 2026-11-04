@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Eyebrow } from "@/components/eyebrow";
+import berita from "@/content/berita.json";
+
+export const metadata: Metadata = {
+  title: "Jasa Pembuatan Aplikasi Building Management",
+  description: "SistemGedung membantu pengelola apartemen dan perkantoran mengelola tenant, IPL, keluhan, aset, dan maintenance dalam aplikasi building management.",
+  alternates: { canonical: "/" },
+};
 
 const capabilities = [
   { n: "01", title: "Keluhan & work order", text: "Catat kebutuhan, tentukan prioritas, lalu ikuti progres penanganannya." },
@@ -48,8 +56,8 @@ export default function HomePage() {
 
       <section className="section home-pricing">
         <div className="container home-pricing-layout">
-          <div><Eyebrow>PAKET SEWA & DUKUNGAN</Eyebrow><h2>Mulai dari lingkup<br />yang sesuai kebutuhan.</h2><p>Lisensi aplikasi, server terkelola, dan dukungan dalam pilihan paket bulanan.</p></div>
-          <div className="home-pricing-summary"><span>Estimasi awal Basic</span><strong>Rp3.900.000<small> / bulan</small></strong><p>Untuk 1 properti hingga 100 unit. Angka awal menunggu validasi beban dan biaya.</p><Link className="button button-dark" href="/harga">Bandingkan paket <span>↗</span></Link></div>
+          <div><Eyebrow>PAKET SEWA & DUKUNGAN</Eyebrow><h2>Mulai dari lingkup<br />yang sesuai kebutuhan.</h2><p>Sewa aplikasi building management mulai dari satu gedung, dengan opsi VPS dan support teknisi.</p></div>
+          <div className="home-pricing-summary"><span>Estimasi sewa aplikasi · 1 gedung</span><strong>Rp2.000.000<small> / bulan</small></strong><p>VPS dan domain tidak termasuk. Harga paket multi-gedung dan layanan tambahan menunggu konfirmasi kebutuhan.</p><Link className="button button-dark" href="/harga">Bandingkan paket <span>↗</span></Link></div>
         </div>
       </section>
 
@@ -58,7 +66,7 @@ export default function HomePage() {
         <div className="split-copy"><Eyebrow>DUA JALUR, SATU TUJUAN</Eyebrow><h2>Teknologi yang memahami cara gedung bekerja.</h2><p>Kolaborasikan pengembangan aplikasi khusus dengan dukungan proses operasional. Mulai dari pemetaan alur sampai pengelolaan layanan sehari-hari.</p><div className="service-links"><Link href="/layanan/software"><span>01</span><b>Pengembangan software</b><i>↗</i></Link><Link href="/layanan/operasional"><span>02</span><b>Dukungan operasional</b><i>↗</i></Link></div></div>
       </section>
 
-      <section className="section insight-section"><div className="container"><div className="section-heading"><div><Eyebrow>CATATAN PRAKTIS</Eyebrow><h2>Wawasan untuk pengelolaan<br />yang lebih terstruktur.</h2></div><Link className="text-link" href="/artikel">Jelajahi semua artikel <span>→</span></Link></div><div className="insight-card"><div className="insight-index">FIELD<br />NOTES<br /><b>01—04</b></div><div className="insight-content"><span className="article-tag">PANDUAN</span><h3>Mulai dari proses yang paling sering menghambat tim.</h3><p>Panduan praktis untuk memilih sistem dan menata alur kerja operasional gedung.</p></div><Link href="/artikel" className="insight-arrow" aria-label="Baca artikel">↗</Link></div></div></section>
+      <section className="section insight-section home-news-section"><div className="container"><div className="section-heading"><div><Eyebrow>BERITA TERBARU</Eyebrow><h2>Panduan praktis untuk<br />operasional gedung.</h2></div><Link className="text-link" href="/berita">Lihat semua berita <span>→</span></Link></div><div className="home-news-grid">{berita.slice(0, 3).map((item, index) => <Link className="home-news-card" href={`/berita/${item.slug}`} key={item.slug}><span className={`home-news-index cover-${(index % 4) + 1}`}>0{index + 1}<i>SG.</i></span><div><span className="article-tag">{item.category}</span><h3>{item.title}</h3><p>{item.excerpt}</p><small>{item.readTime} baca <b>↗</b></small></div></Link>)}</div></div></section>
 
       <section className="cta-section"><div className="container cta-layout"><div><Eyebrow>LANGKAH BERIKUTNYA</Eyebrow><h2>Setiap gedung punya<br />cerita operasionalnya.</h2><p>Ceritakan kebutuhan Anda. Kita mulai dari percakapan yang terarah.</p></div><Link className="button button-lime" href="/demo">Ajukan diskusi <span>↗</span></Link></div></section>
     </>

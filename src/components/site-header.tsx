@@ -12,7 +12,7 @@ export function SiteHeader() {
           <Link href="/layanan/software">Layanan</Link>
           <Link href="/harga">Paket & harga</Link>
           <Link href="/solusi">Solusi</Link>
-          <Link href="/artikel">Wawasan</Link>
+          <Link href="/berita">Berita</Link>
           <Link href="/#tentang">Tentang</Link>
         </nav>
         <Link className="button button-dark nav-cta" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
@@ -20,7 +20,7 @@ export function SiteHeader() {
           <summary aria-label="Buka navigasi">☰</summary>
           <div className="mobile-menu">
             <Link href="/layanan/software">Layanan</Link><Link href="/harga">Paket & harga</Link><Link href="/solusi">Solusi</Link>
-            <Link href="/artikel">Wawasan</Link><Link href="/demo">Diskusikan kebutuhan</Link>
+            <Link href="/berita">Berita</Link><Link href="/demo">Diskusikan kebutuhan</Link>
           </div>
         </details>
       </div>

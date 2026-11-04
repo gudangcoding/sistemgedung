@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Eyebrow } from "@/components/eyebrow";
 
 export const metadata: Metadata = {
-  title: "Pengembangan Software Building Management",
-  description: "Pengembangan aplikasi manajemen gedung yang dirancang mengikuti kebutuhan pengelola apartemen dan gedung perkantoran.",
+  title: "Jasa Pembuatan Aplikasi Building Management",
+  description: "Jasa pengembangan aplikasi building management custom untuk pengelola apartemen dan gedung perkantoran, mencakup tenant, work order, aset, dan maintenance.",
   alternates: { canonical: "/layanan/software" },
 };
 

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/content/articles";
+import berita from "@/content/berita.json";
+import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const pages = [
     "",
     "/layanan/software",
@@ -12,12 +13,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solusi/apartemen",
     "/solusi/perkantoran",
     "/artikel",
-    "/demo",
+    "/berita",
   ];
   return [
-    ...pages.map((path) => ({ url: new URL(path, baseUrl).toString(), changeFrequency: "monthly" as const })),
+    ...pages.map((path) => ({ url: new URL(path, siteUrl).toString(), changeFrequency: "monthly" as const })),
     ...articles.map((article) => ({
-      url: new URL(`/artikel/${article.slug}`, baseUrl).toString(),
+      url: new URL(`/artikel/${article.slug}`, siteUrl).toString(),
+      changeFrequency: "yearly" as const,
+    })),
+    ...berita.map((article) => ({
+      url: new URL(`/berita/${article.slug}`, siteUrl).toString(),
       changeFrequency: "yearly" as const,
     })),
   ];

@@ -58,12 +58,15 @@ Suggested Google Business Profile description, to be published only if it accura
 
 > SistemGedung menyediakan pengembangan aplikasi manajemen gedung dan dukungan operasional untuk apartemen serta gedung perkantoran di Jakarta dan sekitarnya. Layanan membantu pengelola menangani kebutuhan tenant, keluhan, aset, dan pemeliharaan gedung secara lebih terstruktur.
 
-Provide static, indexable Indonesian editorial pages (not fabricated news or dates). Initial evergreen topics:
+Provide static, indexable Indonesian editorial pages in the `/berita` section, with the content persisted in `src/content/berita.json` and no fabricated publication dates or current-event claims. Include an accessible Berita navbar link, a latest-news section on the homepage, an index of cards, static detail pages, and related-content links. Initial evergreen topics:
 
 - Panduan memilih aplikasi building management untuk apartemen dan gedung perkantoran.
 - Cara mengelola keluhan tenant dan work order secara terstruktur.
 - Checklist preventive maintenance untuk fasilitas gedung.
 - Peran aplikasi facility management dalam pencatatan aset dan pekerjaan teknisi.
+- Vendor aplikasi building management and software selection.
+- Cost components for building-management and apartment applications.
+- Apartment management, IPL and utility-meter workflows, tenant ticketing, visitor access, and maintenance.
 
 Each article should have a useful, factual body, descriptive title, metadata, canonical URL, and links to relevant services. Do not imply current events or publish dates that are not real.
 
@@ -77,19 +80,44 @@ Each article should have a useful, factual body, descriptive title, metadata, ca
 
 ## Application rental and support pricing (approved update)
 
-Publish original, clearly labeled configurable launch estimates for application rental, managed server, and support. These are initial estimates pending business cost/load validation, not verified market rates. Availability, final sizing, scope, and commercial terms must be confirmed before contract; do not imply guaranteed uptime or resolution times.
+The user approved separate application-rental, complete-bundle, technician-support, and VPS sections. All figures below are initial estimates supplied/approved by the user, not verified market rates or a final offer. Validate costs and server capacity before publishing as binding prices.
 
-All three monthly packages include a building-management application license and SSL, with a minimum 12-month term:
+### Application rental
 
-- **Basic — Rp3.900.000/month:** 1 property, up to 100 units; managed application server 4 GB RAM / 80 GB SSD; managed PostgreSQL allocation sized after onboarding; daily backups; weekday remote support with next-business-day response target; one remote onboarding session; application updates.
-- **Growth — Rp6.900.000/month:** up to 3 properties / 400 units; managed application server 8 GB RAM / 160 GB SSD; daily backups; priority remote support with a 4-business-hour response target; 2 onsite visits per month, 4 hours each, within the Jakarta area; 2 training sessions.
-- **Enterprise — Rp12.900.000/month:** up to 10 properties / 1,500 units; managed application server 16 GB RAM / 300 GB SSD; daily backups and a quarterly restore test; critical-support 2-business-hour response target; 4 onsite visits per month within the Jakarta area; dedicated onboarding.
+- 1 building: Rp2.000.000/month total.
+- Up to 5 buildings: Rp1.700.000/month total for all buildings in this tier.
+- Up to 10 buildings: Rp1.500.000/month total for all buildings in this tier.
 
-Display support business hours as the proposed service window, Monday–Friday, 09.00–17.00 WIB, excluding public holidays; final hours and terms must be agreed in writing. Response targets are acknowledgements/initial response, not resolution-time guarantees or uptime SLAs. Clearly state how requests outside business hours are handled and that Jakarta-area onsite travel scope is limited to the agreed Jakarta service area.
+The user explicitly confirmed the 5- and 10-building prices are totals for all buildings, not per-building rates. Do not silently reinterpret these prices. Application rental has a 12-month minimum term. Building/unit/user/storage limits and support scope must be agreed after assessment. VPS and domain are excluded from standalone application rental.
 
-Separate estimate add-ons: managed server-only from Rp1.500.000/month (final sizing after assessment); an extra onsite visit Rp750.000 per 4-hour session within the Jakarta area; remote training Rp1.250.000 per 2-hour session; migration and custom modules quoted after assessment. Overage, extra server resources, custom features, domains, and third-party charges are quoted separately.
+### Complete bundles
 
-Pricing page must disclose that all figures are initial configurable estimates pending cost/load validation, not verified market rates. Before agreement, clarify applicable taxes, PostgreSQL inclusion/scope and sizing (Basic allocation is sized after onboarding), backup-retention details, property/unit overages, onsite travel beyond Jakarta, billing/payment terms, and any third-party costs. Provide a package-specific CTA to the existing request form; do not fabricate contact data.
+Derived from the approved component estimates. State the included app tier, VPS, and four-hour technician visits; final sizing and scope remain subject to assessment:
+
+- **Starter — Rp4.500.000/month:** 1-building application tier (Rp2.000.000) + VPS Starter (Rp500.000) + 4 visits (4 × Rp500.000).
+- **Growth — Rp5.700.000/month:** up-to-5-building application tier (Rp1.700.000 total) + VPS Bisnis (Rp1.000.000) + technician support 8x (Rp3.000.000).
+- **Scale — Rp10.000.000/month:** up-to-10-building application tier (Rp1.500.000 total) + VPS Enterprise (Rp1.500.000) + technician support 20x (Rp7.000.000).
+
+Complete bundle term is minimum 12 months. Domain is excluded. Do not promise uptime or unverified technical capacity.
+
+### Technician support
+
+- Ad hoc: Rp500.000 per visit, up to 4 hours.
+- 8 visits/month: Rp3.000.000 (Rp1.000.000 savings versus ad hoc), minimum 3 months.
+- 12 visits/month: Rp4.500.000 (Rp1.500.000 savings), minimum 3 months.
+- 20 visits/month: Rp7.000.000 (Rp3.000.000 savings), minimum 3 months.
+
+Onsite scope is the agreed Jakarta service area; travel outside it is quoted separately.
+
+### Separate VPS rental
+
+- Starter: Rp500.000/month, 4 GB RAM / 100 GB SSD.
+- Bisnis: Rp1.000.000/month, 8 GB RAM / 100 GB SSD.
+- Enterprise: Rp1.500.000/month, 16 GB RAM / 100 GB SSD.
+
+VPS rental has a minimum 12-month term. Setup assistance and SSL configuration are included in the estimate; domain is excluded. CPU/vCPU, data-center location, backup, monitoring, provider charges, applicable taxes, and final sizing must be confirmed before order.
+
+Proposed support service hours: Monday–Friday, 09.00–17.00 WIB, excluding public holidays; agree final hours in writing. Response targets, uptime SLA, resolution promises, and backup retention are not implied unless separately agreed. Clearly label pricing as estimates and confirm property/unit limits, storage, integrations, taxes, payment terms, and third-party charges before contract. Package CTAs may prefill the demo request form; the form itself does not yet persist or forward submissions.
 
 ## Application modules
 

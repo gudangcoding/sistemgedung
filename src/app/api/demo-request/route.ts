@@ -1,4 +1,5 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const packageOptions = ["", "apps-one", "apps-five", "apps-ten", "bundle-starter", "bundle-growth", "bundle-scale", "support-single", "support-8", "support-12", "support-20", "vps-starter", "vps-business", "vps-enterprise", "custom"];
 
 export async function POST(request: Request) {
   let payload: unknown;
@@ -20,7 +21,7 @@ export async function POST(request: Request) {
   const packageInterest = data.packageInterest;
   if (name.length < 2 || name.length > 100 || !emailPattern.test(email) || email.length > 254 ||
     !["Apartemen", "Gedung perkantoran", "Lainnya"].includes(propertyType) || message.length < 10 || message.length > 2000 ||
-    (packageInterest !== undefined && !["", "basic", "growth", "enterprise", "custom"].includes(String(packageInterest)))) {
+    (packageInterest !== undefined && !packageOptions.includes(String(packageInterest)))) {
     return Response.json({ error: "Periksa kembali kelengkapan formulir." }, { status: 400 });
   }
 
