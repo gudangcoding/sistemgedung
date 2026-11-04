@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { demoAppUrl } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -10,7 +11,7 @@ export function SiteFooter() {
           <p>Teknologi dan dukungan operasional untuk pengelolaan gedung yang lebih terstruktur.</p>
         </div>
         <div><strong>Jelajahi</strong><Link href="/layanan/software">Pengembangan software</Link><Link href="/layanan/operasional">Dukungan operasional</Link><Link href="/harga">Paket & harga</Link><Link href="/berita">Berita</Link></div>
-        <div><strong>Portal</strong><Link href="/portal">Masuk ke portal</Link><Link href="/solusi/apartemen">Apartemen</Link><Link href="/solusi/perkantoran">Gedung perkantoran</Link></div>
+        <div><strong>Portal</strong><Link href="/portal">Masuk ke portal</Link><a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a><Link href="/solusi/apartemen">Apartemen</Link><Link href="/solusi/perkantoran">Gedung perkantoran</Link></div>
         <div><strong>Kontak</strong><p>Informasi kontak belum disediakan. Ajukan permintaan diskusi melalui formulir.</p><Link className="footer-cta" href="/demo">Ajukan diskusi ↗</Link></div>
       </div>
       <div className="container footer-bottom"><span>© {new Date().getFullYear()} SistemGedung</span><span>Informasi layanan perlu dikonfirmasi sebelum publikasi.</span></div>

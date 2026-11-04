@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Eyebrow } from "@/components/eyebrow";
 import { DemoForm } from "@/components/demo-form";
+import { demoAppUrl } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Diskusikan Kebutuhan", description: "Kirim permintaan untuk membahas kebutuhan aplikasi dan operasional gedung.", alternates: { canonical: "/demo" }, robots: { index: false, follow: true } };
 const packageOptions = ["apps-one", "apps-five", "apps-ten", "bundle-starter", "bundle-growth", "bundle-scale", "support-single", "support-8", "support-12", "support-20", "vps-starter", "vps-business", "vps-enterprise", "custom"];
 export default async function DemoPage({ searchParams }: { searchParams: Promise<{ paket?: string }> }) {
   const { paket } = await searchParams;
   const selectedPackage = paket && packageOptions.includes(paket) ? paket : "";
-  return <section className="demo-page"><div className="container demo-layout"><div><Eyebrow>MULAI PERCAKAPAN</Eyebrow><h1>Ceritakan kebutuhan<br />gedung Anda.</h1><p className="inner-lead">Bagikan konteks singkat agar diskusi awal lebih terarah. Informasi pada formulir ini tidak disimpan atau diteruskan dalam scaffold ini.</p><div className="demo-note"><span>↗</span><p>Kontak bisnis belum tersedia. Mohon lengkapi dan verifikasi informasi kontak sebelum formulir digunakan secara operasional.</p></div></div><DemoForm initialPackage={selectedPackage} /></div></section>;
+  return <section className="demo-page"><div className="container demo-layout"><div><Eyebrow>MULAI PERCAKAPAN</Eyebrow><h1>Ceritakan kebutuhan<br />gedung Anda.</h1><p className="inner-lead">Bagikan konteks singkat agar diskusi awal lebih terarah. Informasi pada formulir ini tidak disimpan atau diteruskan dalam scaffold ini.</p><div className="demo-live"><a className="button button-dark" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Buka demo aplikasi <span>↗</span></a><p>Demo berjalan di domain terpisah. Gunakan data uji, bukan data operasional nyata.</p></div><div className="demo-note"><span>↗</span><p>Kontak bisnis belum tersedia. Mohon lengkapi dan verifikasi informasi kontak sebelum formulir digunakan secara operasional.</p></div></div><DemoForm initialPackage={selectedPackage} /></div></section>;
 }

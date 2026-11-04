@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { beritaImage } from "@/lib/media";
+import { demoAppUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Jasa Pembuatan Aplikasi Building Management",
@@ -27,7 +28,7 @@ export default function HomePage() {
             <Eyebrow>BUILDING MANAGEMENT, MADE CLEAR</Eyebrow>
             <h1>Gedung terkelola.<br /><span>Hari lebih tertata.</span></h1>
             <p className="hero-lead">Sistem untuk membantu pengelola apartemen dan gedung perkantoran menghubungkan tenant, tim operasional, dan pemeliharaan.</p>
-            <div className="hero-actions"><Link className="button button-lime" href="/demo">Diskusikan kebutuhan <span>↗</span></Link><Link className="text-link light-link" href="/layanan/software">Kenali layanan <span>→</span></Link></div>
+            <div className="hero-actions"><Link className="button button-lime" href="/demo">Diskusikan kebutuhan <span>↗</span></Link><Link className="text-link light-link" href="/layanan/software">Kenali layanan <span>→</span></Link><a className="text-link light-link" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span>↗</span></a></div>
             <div className="hero-proof"><span className="proof-icon">✳</span><span>Pengembangan sesuai kebutuhan<br /><b>software & dukungan operasional</b></span></div>
           </div>
           <div className="hero-visual" aria-label="Ilustrasi dashboard pengelolaan gedung">

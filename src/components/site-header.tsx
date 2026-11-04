@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { demoAppUrl } from "@/lib/site";
 
 export function SiteHeader() {
   return (
@@ -15,6 +16,7 @@ export function SiteHeader() {
           <Link href="/solusi">Solusi</Link>
           <Link href="/berita">Berita</Link>
           <Link href="/#tentang">Tentang</Link>
+          <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span aria-hidden="true">↗</span></a>
         </nav>
         <Link className="button button-dark nav-cta" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
         <details className="mobile-nav">
@@ -22,6 +24,7 @@ export function SiteHeader() {
           <div className="mobile-menu">
             <Link href="/layanan/software">Layanan</Link><Link href="/harga">Paket & harga</Link><Link href="/solusi">Solusi</Link>
             <Link href="/berita">Berita</Link><Link href="/demo">Diskusikan kebutuhan</Link>
+            <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a>
           </div>
         </details>
       </div>
