@@ -14,7 +14,7 @@ button{cursor:pointer}
 .brand-mark{width:34px;height:34px;background:var(--ink);color:var(--lime);display:grid;place-items:center;border-radius:10px;font-size:13px;letter-spacing:-1px}
 .brand-mark span{color:white}
 .brand-logo{width:34px;height:34px;border-radius:10px;flex:none;object-fit:cover}
-.main-nav{display:flex;gap:28px;margin-left:60px;color:#42524c;font-size:13px;font-weight:600}
+.main-nav{display:flex;gap:24px;margin-left:40px;color:#42524c;font-size:13px;font-weight:600}
 .main-nav a{white-space:nowrap}
 .main-nav a:hover,.text-link:hover{color:var(--green)}
 .main-nav .nav-demo{color:#31734f}

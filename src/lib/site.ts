@@ -4,6 +4,7 @@ export const siteUrl = new URL(configuredSiteUrl || "https://sistemgedung.com");
 export const siteOrigin = siteUrl.origin;
 export const siteName = "SistemGedung";
 export const siteTitle = "SistemGedung — Aplikasi Manajemen Gedung";
+export const homeUrl = "https://www.sistemgedung.com/";
 export const demoAppUrl =
   process.env.NEXT_PUBLIC_DEMO_APP_URL?.trim() || "https://bm.gudangcoding.my.id/login";
 
