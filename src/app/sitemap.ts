@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/content/articles";
 import berita from "@/content/berita.json";
+import { artikelOgImage, beritaOgImage } from "@/lib/media";
 import { contentUpdatedAt, siteUrl } from "@/lib/site";
 
 const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
@@ -28,12 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: contentUpdatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.6,
+      images: [new URL(artikelOgImage(article.slug), siteUrl).toString()],
     })),
     ...berita.map((article) => ({
       url: new URL(`/berita/${article.slug}`, siteUrl).toString(),
       lastModified: contentUpdatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.7,
+      images: [new URL(beritaOgImage(article.slug), siteUrl).toString()],
     })),
   ];
 }

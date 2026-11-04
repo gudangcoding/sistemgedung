@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { beritaImage, beritaOgImage } from "@/lib/media";
-import { articleJsonLd, breadcrumbJsonLd, serializeJsonLd } from "@/lib/site";
+import { articleJsonLd, breadcrumbJsonLd, contentPublishedAt, contentUpdatedAt, serializeJsonLd } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -28,6 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: item.excerpt,
       type: "article",
       url: `/berita/${item.slug}`,
+      publishedTime: contentPublishedAt,
+      modifiedTime: contentUpdatedAt,
       images: [{ url: image, width: 1200, height: 630, alt: item.title }],
     },
     twitter: {

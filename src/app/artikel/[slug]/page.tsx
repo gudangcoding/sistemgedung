@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/eyebrow";
 import { articles } from "@/content/articles";
 import { artikelImage, artikelOgImage } from "@/lib/media";
-import { articleJsonLd, breadcrumbJsonLd, serializeJsonLd } from "@/lib/site";
+import { articleJsonLd, breadcrumbJsonLd, contentPublishedAt, contentUpdatedAt, serializeJsonLd } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -28,6 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.summary,
       type: "article",
       url: `/artikel/${article.slug}`,
+      publishedTime: contentPublishedAt,
+      modifiedTime: contentUpdatedAt,
       images: [{ url: image, width: 1200, height: 630, alt: article.title }],
     },
     twitter: {
