@@ -1,6 +1,7 @@
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 
-export const siteUrl = new URL(configuredSiteUrl || "https://sistemgedung.com");
+export const siteUrl = new URL(configuredSiteUrl || "https://www.sistemgedung.com");
+if (siteUrl.hostname === "sistemgedung.com") siteUrl.hostname = "www.sistemgedung.com";
 export const siteOrigin = siteUrl.origin;
 export const siteName = "SistemGedung";
 export const siteTitle = "Software Building Management Indonesia | SistemGedung";
@@ -14,7 +15,7 @@ export const playStoreLinks = {
 } as const;
 
 export const siteDescription =
-  "Kelola tenant, IPL, keluhan, aset, dan maintenance apartemen & gedung perkantoran dalam satu software building management Indonesia. Jadwalkan demo gratis.";
+  "Aplikasi building management untuk apartemen dan gedung. Kelola tenant, IPL, keluhan, aset, dan maintenance dalam satu sistem. Jadwalkan demo gratis.";
 
 export const contentPublishedAt = "2026-01-10T08:00:00+07:00";
 export const contentUpdatedAt = "2026-10-01T08:00:00+07:00";

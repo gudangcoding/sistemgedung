@@ -9,7 +9,7 @@ import { appImages, beritaImage } from "@/lib/media";
 import { demoAppUrl, faqJsonLd, playStoreLinks, serializeJsonLd, siteDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Software Building Management Indonesia",
+  title: "Aplikasi Building Management Indonesia",
   description: siteDescription,
   alternates: { canonical: "/" },
 };
@@ -38,7 +38,7 @@ const featuredServices = [
   },
   {
     icon: "◎",
-    title: "Portal Tenant",
+    title: "Portal Tenant Penghuni",
     text: "Beri penghuni ruang mandiri untuk mengirim keluhan, memantau status, dan melihat informasi gedung.",
     points: ["Permintaan layanan", "Riwayat penanganan", "Pengumuman gedung"],
     href: "/portal/tenant",
@@ -54,7 +54,7 @@ const featuredServices = [
   },
   {
     icon: "◇",
-    title: "Aplikasi Custom",
+    title: "Pengembangan Modul Custom",
     text: "Butuh alur di luar standar? Bangun modul POS, inventory, ERP, absensi, atau integrasi khusus.",
     points: ["Modul sesuai proses", "Integrasi API", "Pengembangan bertahap"],
     href: "/demo?paket=custom",
@@ -81,8 +81,8 @@ const featuredServices = [
 const goLiveSteps = [
   { n: "01", title: "Demo & Survei Gratis", text: "Coba 3 aplikasi live + kami petakan kebutuhan: jumlah user, cabang, dan alur kerja Anda." },
   { n: "02", title: "Setup & White-Label", text: "Aplikasi disiapkan + dipasang brand Anda: logo, warna, nama, dan domain sendiri bila perlu." },
-  { n: "03", title: "Migrasi Data", text: "Data lama (Excel / sistem lama) kami pindahkan: pelanggan, unit, tarif, dan histori transaksi." },
-  { n: "04", title: "Training Pengguna", text: "Admin, kasir, kurir, dan pengelola dilatih sampai bisa — onsite maupun daring." },
+  { n: "03", title: "Migrasi Data Operasional", text: "Data lama (Excel / sistem lama) kami pindahkan: pelanggan, unit, tarif, dan histori transaksi." },
+  { n: "04", title: "Training Pengguna Aplikasi", text: "Admin, kasir, kurir, dan pengelola dilatih sampai bisa — onsite maupun daring." },
   { n: "05", title: "Go-Live Didampingi", text: "Peluncuran didampingi teknisi sampai operasional hari pertama berjalan mulus." },
   { n: "06", title: "Support & Kunjungan", text: "Bantuan remote tiap hari + kunjungan teknisi terjadwal: lepas Rp500.000 atau paket s/d 20x/bulan." },
 ];
@@ -96,9 +96,9 @@ const techGroups = [
 
 const liveDemos = [
   { tag: "LIVE DEMO", title: "Building Management", text: "Kelola tenant, tagihan IPL, keluhan, aset, dan work order.", href: demoAppUrl, action: "Buka demo live", external: true },
-  { tag: "DEMO PORTAL", title: "Portal Tenant", text: "Lihat pengalaman penghuni mengirim keluhan dan memantau status.", href: "/portal/tenant", action: "Buka portal tenant" },
+  { tag: "DEMO PORTAL", title: "Demo Portal Tenant", text: "Lihat pengalaman penghuni mengirim keluhan dan memantau status.", href: "/portal/tenant", action: "Buka portal tenant" },
   { tag: "DEMO PORTAL", title: "Portal Admin", text: "Tinjau tiket, tenant, aset, vendor, dan ringkasan operasional.", href: "/portal/admin", action: "Buka portal admin" },
-  { tag: "CUSTOM", title: "Aplikasi Custom", text: "POS, inventory, ERP, absensi, dan integrasi sesuai alur kerja.", href: "/demo?paket=custom", action: "Diskusikan kebutuhan" },
+  { tag: "CUSTOM", title: "Demo Solusi Custom", text: "POS, inventory, ERP, absensi, dan integrasi sesuai alur kerja.", href: "/demo?paket=custom", action: "Diskusikan kebutuhan" },
   { tag: "WHITE-LABEL", title: "Rebrand Jadi Milik Anda", text: "Logo, warna, nama aplikasi, dan domain perusahaan sendiri.", href: "/demo?paket=custom", action: "Diskusikan white-label" },
   { tag: "SUPPORT", title: "Teknisi Onsite", text: "Instalasi, training, dan troubleshooting hingga 20x per bulan.", href: "/harga#support", action: "Lihat paket support" },
 ];
@@ -126,7 +126,7 @@ const mobileApps = [
 
 const supportTypes = [
   { n: "01", title: "Migrasi Data", text: "Pindahkan data dari sistem lama, Excel, CSV, atau Google Sheets tanpa input ulang.", points: ["Pemetaan & pembersihan data", "Verifikasi setelah migrasi", "Pendampingan awal"] },
-  { n: "02", title: "Training Pengguna", text: "Latih admin, pengelola, dan tim operasional sampai paham alur aplikasi.", points: ["Sesi online atau onsite", "Panduan penggunaan", "Rekaman sesi bila diperlukan"] },
+  { n: "02", title: "Pelatihan Tim & Onboarding", text: "Latih admin, pengelola, dan tim operasional sampai paham alur aplikasi.", points: ["Sesi online atau onsite", "Panduan penggunaan", "Rekaman sesi bila diperlukan"] },
   { n: "03", title: "Custom Module", text: "Tambahkan modul yang belum tersedia agar aplikasi mengikuti proses bisnis Anda.", points: ["Modul baru terintegrasi", "Estimasi & jadwal jelas", "Pengembangan bertahap"] },
 ];
 
@@ -173,7 +173,7 @@ export default function HomePage() {
         <div className="container hero-layout">
           <div className="hero-copy">
             <Eyebrow>BUILDING MANAGEMENT, MADE CLEAR</Eyebrow>
-            <h1>Gedung terkelola.<br /><span>Hari lebih tertata.</span></h1>
+            <h1>Aplikasi building management<br /><span>untuk apartemen dan gedung.</span></h1>
             <p className="hero-lead">Sistem untuk membantu pengelola apartemen dan gedung perkantoran menghubungkan tenant, tim operasional, dan pemeliharaan. Aplikasi sudah live dan bisa dicoba sebelum Anda memutuskan.</p>
             <div className="hero-actions"><Link className="button button-lime" href="/demo">Diskusikan kebutuhan <span>↗</span></Link><Link className="text-link light-link" href="/layanan/software">Kenali layanan <span>→</span></Link><a className="text-link light-link" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span>↗</span></a></div>
             <div className="hero-proof"><span className="proof-icon">✳</span><span>Aplikasi live &amp; white-label<br /><b>setup, migrasi data, training, support teknisi</b></span></div>
