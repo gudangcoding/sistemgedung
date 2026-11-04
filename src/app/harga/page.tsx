@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Harga Sewa Aplikasi Building Management",
   description: "Bandingkan estimasi sewa aplikasi building management per gedung, paket aplikasi dan VPS, serta dukungan teknisi.",
   alternates: { canonical: "/harga" },
+  openGraph: {
+    title: "Harga Sewa Aplikasi Building Management",
+    description: "Bandingkan estimasi sewa aplikasi building management per gedung, paket aplikasi dan VPS, serta dukungan teknisi.",
+    url: "/harga",
+  },
 };
 
 export default function PricingPage() {

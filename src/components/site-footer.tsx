@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function SiteFooter() {
@@ -5,7 +6,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <Link className="brand footer-brand" href="/"><span className="brand-mark">S<span>G</span></span><span>Sistem<span className="brand-light">Gedung</span></span></Link>
+          <Link className="brand footer-brand" href="/"><Image className="brand-logo" src="/logo.svg" alt="" width={34} height={34} /><span>Sistem<span className="brand-light">Gedung</span></span></Link>
           <p>Teknologi dan dukungan operasional untuk pengelolaan gedung yang lebih terstruktur.</p>
         </div>
         <div><strong>Jelajahi</strong><Link href="/layanan/software">Pengembangan software</Link><Link href="/layanan/operasional">Dukungan operasional</Link><Link href="/harga">Paket & harga</Link><Link href="/berita">Berita</Link></div>

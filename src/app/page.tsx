@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
+import { beritaImage } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Jasa Pembuatan Aplikasi Building Management",
@@ -66,7 +68,7 @@ export default function HomePage() {
         <div className="split-copy"><Eyebrow>DUA JALUR, SATU TUJUAN</Eyebrow><h2>Teknologi yang memahami cara gedung bekerja.</h2><p>Kolaborasikan pengembangan aplikasi khusus dengan dukungan proses operasional. Mulai dari pemetaan alur sampai pengelolaan layanan sehari-hari.</p><div className="service-links"><Link href="/layanan/software"><span>01</span><b>Pengembangan software</b><i>↗</i></Link><Link href="/layanan/operasional"><span>02</span><b>Dukungan operasional</b><i>↗</i></Link></div></div>
       </section>
 
-      <section className="section insight-section home-news-section"><div className="container"><div className="section-heading"><div><Eyebrow>BERITA TERBARU</Eyebrow><h2>Panduan praktis untuk<br />operasional gedung.</h2></div><Link className="text-link" href="/berita">Lihat semua berita <span>→</span></Link></div><div className="home-news-grid">{berita.slice(0, 3).map((item, index) => <Link className="home-news-card" href={`/berita/${item.slug}`} key={item.slug}><span className={`home-news-index cover-${(index % 4) + 1}`}>0{index + 1}<i>SG.</i></span><div><span className="article-tag">{item.category}</span><h3>{item.title}</h3><p>{item.excerpt}</p><small>{item.readTime} baca <b>↗</b></small></div></Link>)}</div></div></section>
+      <section className="section insight-section home-news-section"><div className="container"><div className="section-heading"><div><Eyebrow>BERITA TERBARU</Eyebrow><h2>Panduan praktis untuk<br />operasional gedung.</h2></div><Link className="text-link" href="/berita">Lihat semua berita <span>→</span></Link></div><div className="home-news-grid">{berita.slice(0, 3).map((item, index) => <Link className="home-news-card" href={`/berita/${item.slug}`} key={item.slug}><div className="home-news-thumb"><Image src={beritaImage(item.slug)} alt={`Ilustrasi ${item.category}: ${item.title}`} fill sizes="(max-width: 760px) 100vw, (max-width: 980px) 50vw, 33vw" /><span>0{index + 1}</span></div><div><span className="article-tag">{item.category}</span><h3>{item.title}</h3><p>{item.excerpt}</p><small>{item.readTime} baca <b>↗</b></small></div></Link>)}</div></div></section>
 
       <section className="cta-section"><div className="container cta-layout"><div><Eyebrow>LANGKAH BERIKUTNYA</Eyebrow><h2>Setiap gedung punya<br />cerita operasionalnya.</h2><p>Ceritakan kebutuhan Anda. Kita mulai dari percakapan yang terarah.</p></div><Link className="button button-lime" href="/demo">Ajukan diskusi <span>↗</span></Link></div></section>
     </>

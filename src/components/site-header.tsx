@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function SiteHeader() {
@@ -5,7 +6,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container nav-wrap">
         <Link className="brand" href="/" aria-label="SistemGedung, beranda">
-          <span className="brand-mark">S<span>G</span></span>
+          <Image className="brand-logo" src="/logo.svg" alt="" width={34} height={34} />
           <span>Sistem<span className="brand-light">Gedung</span></span>
         </Link>
         <nav className="main-nav" aria-label="Navigasi utama">
