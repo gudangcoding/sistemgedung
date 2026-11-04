@@ -11,19 +11,22 @@ export function SiteHeader() {
           <span>Sistem<span className="brand-light">Gedung</span></span>
         </Link>
         <nav className="main-nav" aria-label="Navigasi utama">
-          <Link href="/layanan/software">Layanan</Link>
+          <Link href="/#layanan">Layanan</Link>
+          <Link href="/#keunggulan">Keunggulan</Link>
+          <Link href="/#teknologi">Teknologi</Link>
+          <Link href="/#proses">Proses</Link>
           <Link href="/harga">Paket & harga</Link>
-          <Link href="/solusi">Solusi</Link>
           <Link href="/berita">Berita</Link>
-          <Link href="/#tentang">Tentang</Link>
-          <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span aria-hidden="true">↗</span></a>
+          <Link href="/#faq">FAQ</Link>
+          <a className="nav-demo" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span aria-hidden="true">↗</span></a>
         </nav>
         <Link className="button button-dark nav-cta" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
         <details className="mobile-nav">
           <summary aria-label="Buka navigasi">☰</summary>
           <div className="mobile-menu">
-            <Link href="/layanan/software">Layanan</Link><Link href="/harga">Paket & harga</Link><Link href="/solusi">Solusi</Link>
-            <Link href="/berita">Berita</Link><Link href="/demo">Diskusikan kebutuhan</Link>
+            <Link href="/#layanan">Layanan</Link><Link href="/#keunggulan">Keunggulan</Link><Link href="/#teknologi">Teknologi</Link>
+            <Link href="/#proses">Proses</Link><Link href="/harga">Paket & harga</Link><Link href="/berita">Berita</Link>
+            <Link href="/#faq">FAQ</Link><Link href="/demo">Diskusikan kebutuhan</Link>
             <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a>
           </div>
         </details>
