@@ -7,7 +7,7 @@ export const siteName = "SistemGedung";
 export const siteTitle = "Software Building Management Indonesia | SistemGedung";
 export const homeUrl = `${siteOrigin}/`;
 export const demoAppUrl =
-  process.env.NEXT_PUBLIC_DEMO_APP_URL?.trim() || "https://bm.gudangcoding.my.id/login";
+  process.env.NEXT_PUBLIC_DEMO_APP_URL?.trim() || "https://bms.gudangcoding.my.id/admin/login";
 
 export const playStoreLinks = {
   support: "https://play.google.com/store/apps/details?id=com.apsyst.cra",
