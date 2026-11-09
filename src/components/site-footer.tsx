@@ -12,7 +12,7 @@ export function SiteFooter() {
         </div>
         <div><strong>Jelajahi</strong><Link href="/layanan/software">Jasa aplikasi building management</Link><Link href="/layanan/operasional">Dukungan operasional</Link><Link href="/sewa-aplikasi-manajemen-gedung">Sewa aplikasi web gedung</Link><Link href="/harga">Rincian harga paket</Link><Link href="/#teknologi">Teknologi</Link><Link href="/#proses">Proses implementasi</Link><Link href="/#faq">FAQ</Link><Link href="/berita">Berita</Link><Link href="/privasi">Kebijakan privasi</Link><Link href="/syarat-ketentuan">Syarat dan ketentuan</Link></div>
         <div><strong>Solusi properti</strong><Link href="/solusi/apartemen">Software apartemen</Link><Link href="/solusi/perkantoran">Gedung perkantoran</Link><Link href="/fitur/tagihan-ipl-apartemen">Tagihan IPL apartemen</Link><Link href="/fitur/pencatatan-meter-gedung">Pencatatan meter gedung</Link><Link href="/fitur/keluhan-penghuni-apartemen">Keluhan penghuni</Link><Link href="/portal">Masuk ke portal</Link><a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a><Link href="/#aplikasi">Aplikasi Android</Link></div>
-        <div><strong>Kontak</strong><p>Informasi kontak belum disediakan. Ajukan permintaan diskusi melalui formulir.</p><Link className="footer-cta" href="/demo">Ajukan diskusi ↗</Link></div>
+        <div><strong>Kontak</strong><p>PT Naura Media Informatika<br />Terdaftar Kemenkumham No. AHU-000304.AH.01.30.Tahun 2022</p><Link className="footer-cta" href="/demo">Ajukan diskusi ↗</Link></div>
       </div>
       <div className="container footer-bottom"><span>© {new Date().getFullYear()} SistemGedung</span><span>Informasi layanan perlu dikonfirmasi sebelum publikasi.</span></div>
     </footer>
