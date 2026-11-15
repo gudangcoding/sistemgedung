@@ -117,6 +117,27 @@ export function articleJsonLd({ title, description, path, imagePath, section }: 
   };
 }
 
+export function webPageJsonLd({ path, imagePath }: { path: string; imagePath: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteOrigin}${path}#webpage`,
+    url: `${siteOrigin}${path}`,
+    name: siteTitle,
+    description: siteDescription,
+    inLanguage: "id-ID",
+    isPartOf: { "@id": `${siteOrigin}/#website` },
+    about: { "@id": `${siteOrigin}/#software` },
+    image: `${siteOrigin}${imagePath}`,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${siteOrigin}${imagePath}`,
+      width: 1600,
+      height: 893,
+    },
+  };
+}
+
 export function faqJsonLd(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

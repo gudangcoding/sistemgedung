@@ -7,12 +7,29 @@ import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { bundlePlans } from "@/content/pricing";
 import { beritaImage, appImages } from "@/lib/media";
-import { demoAppUrl, faqJsonLd, serializeJsonLd, siteDescription } from "@/lib/site";
+import { demoAppUrl, faqJsonLd, serializeJsonLd, siteDescription, siteName, siteTitle, webPageJsonLd } from "@/lib/site";
+
+const heroImageAlt = "Tampilan BMS Web Portal dengan modul tenancy, engineering, billing, akuntansi, operation, security, dan housekeeping";
 
 export const metadata: Metadata = {
   title: "Aplikasi Building Management Indonesia",
   description: siteDescription,
   alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    images: [{ url: appImages.webPortal, width: 1600, height: 893, alt: heroImageAlt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [{ url: appImages.webPortal, alt: heroImageAlt }],
+  },
 };
 
 const capabilities = [
@@ -147,6 +164,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd(faqs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(webPageJsonLd({ path: "/", imagePath: appImages.webPortal })) }} />
 
       <section className="hero">
         <div className="hero-orb orb-one" /><div className="hero-orb orb-two" />

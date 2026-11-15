@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/content/articles";
 import berita from "@/content/berita.json";
-import { artikelOgImage, beritaOgImage } from "@/lib/media";
+import { appImages, artikelOgImage, beritaOgImage } from "@/lib/media";
 import { contentUpdatedAt, siteUrl } from "@/lib/site";
 
-const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
-  { path: "", priority: 1, changeFrequency: "weekly" },
+const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string; images?: string[] }[] = [
+  { path: "", priority: 1, changeFrequency: "weekly", images: [appImages.webPortal] },
   { path: "/layanan/software", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-04T08:00:00+07:00" },
   { path: "/layanan/operasional", priority: 0.8, changeFrequency: "monthly" },
   { path: "/sewa-aplikasi-manajemen-gedung", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-04T08:00:00+07:00" },
@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: page.lastModified ?? contentUpdatedAt,
       changeFrequency: page.changeFrequency,
       priority: page.priority,
+      ...(page.images ? { images: page.images.map((image) => new URL(image, siteUrl).toString()) } : {}),
     })),
     ...articles.map((article) => ({
       url: new URL(`/artikel/${article.slug}`, siteUrl).toString(),
