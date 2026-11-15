@@ -52,6 +52,16 @@ button{cursor:pointer}
 .hero-proof b{color:white;font-weight:600}
 .hero-visual{height:452px;position:relative;display:flex;align-items:center;justify-content:center}
 .visual-glow{position:absolute;width:420px;height:420px;background:#9bd36c24;filter:blur(50px);border-radius:50%}
+.hero-screenshot{position:relative;width:min(540px,100%);overflow:hidden;background:#fff;border:1px solid #ffffff3d;border-radius:10px;box-shadow:0 27px 65px #061d1852;transform:rotate(1.2deg)}
+.hero-screenshot-bar{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f3f6f1;border-bottom:1px solid #e3e9e0;color:#6f7d75;font-size:9px}
+.hero-browser-dots{display:flex;gap:4px}
+.hero-browser-dots i{width:6px;height:6px;border-radius:50%;background:#c9d4cc}
+.hero-browser-dots i:first-child{background:#e7b6a6}
+.hero-browser-dots i:nth-child(2){background:#e8d59b}
+.hero-browser-dots i:last-child{background:#a9cfa9}
+.hero-screenshot-bar>span:nth-child(2){flex:1;text-align:center;letter-spacing:.4px}
+.hero-live{background:#e9f4dc;color:#417849;padding:3px 6px;border-radius:3px;font-size:7px;font-weight:800;letter-spacing:.6px}
+.hero-screenshot img{display:block;width:100%;height:auto}
 .dashboard-card{position:relative;width:min(410px,90%);min-height:362px;border:1px solid #ffffff34;border-radius:9px;background:#fbfcf9;color:var(--ink);padding:22px;box-shadow:0 27px 65px #061d1852;transform:rotate(1.5deg)}
 .dash-top{display:flex;align-items:center;justify-content:space-between}
 .small-label{font-size:8px;letter-spacing:1.4px;color:#8a9891;font-weight:700}

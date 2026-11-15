@@ -6,7 +6,7 @@ import { DemoForm } from "@/components/demo-form";
 import { Eyebrow } from "@/components/eyebrow";
 import berita from "@/content/berita.json";
 import { bundlePlans } from "@/content/pricing";
-import { beritaImage } from "@/lib/media";
+import { beritaImage, appImages } from "@/lib/media";
 import { demoAppUrl, faqJsonLd, serializeJsonLd, siteDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -158,16 +158,17 @@ export default function HomePage() {
             <div className="hero-actions"><Link className="button button-lime" href="/demo">Diskusikan kebutuhan <span>↗</span></Link><Link className="text-link light-link" href="/layanan/software">Kenali layanan <span>→</span></Link><a className="text-link light-link" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span>↗</span></a></div>
             <div className="hero-proof"><span className="proof-icon">✳</span><span>Aplikasi live &amp; white-label<br /><b>setup, migrasi data, training, support teknisi</b></span></div>
           </div>
-          <div className="hero-visual" aria-label="Ilustrasi dashboard pengelolaan gedung">
+          <div className="hero-visual" aria-label="Tampilan BMS Web Portal untuk pengelolaan gedung">
             <div className="visual-glow" />
-            <div className="dashboard-card">
-              <div className="dash-top"><div><span className="small-label">OVERVIEW</span><h3>Ringkasan operasional</h3></div><span className="dash-menu">•••</span></div>
-              <div className="dash-date">Data contoh · Tampilan konsep</div>
-              <div className="metric-row"><div className="metric"><span>Tiket aktif</span><b>12</b><i>Perlu ditinjau</i></div><div className="metric"><span>Jadwal hari ini</span><b>08</b><i>Inspeksi &amp; perawatan</i></div></div>
-              <div className="chart-box"><div className="chart-heading"><b>Aktivitas pekerjaan</b><span>Ilustrasi</span></div><div className="chart"><span style={{ height: "36%" }} /><span style={{ height: "56%" }} /><span style={{ height: "43%" }} /><span style={{ height: "74%" }} /><span style={{ height: "54%" }} /><span style={{ height: "88%" }} /><span style={{ height: "67%" }} /><span style={{ height: "94%" }} /></div><div className="chart-labels"><span>Sen</span><span>Rab</span><span>Jum</span><span>Min</span></div></div>
-              <div className="ticket-line"><span className="status-dot" /><span>Periksa pompa air</span><span className="ticket-status">Terjadwal</span></div>
+            <div className="hero-screenshot">
+              <div className="hero-screenshot-bar">
+                <span className="hero-browser-dots"><i /><i /><i /></span>
+                <span>sistemgedung.com</span>
+                <span className="hero-live">LIVE</span>
+              </div>
+              <Image src={appImages.webPortal} alt="Tampilan BMS Web Portal dengan modul tenancy, engineering, billing, akuntansi, operation, security, dan housekeeping" width={1600} height={893} sizes="(max-width: 760px) 100vw, (max-width: 980px) 50vw, 540px" priority />
             </div>
-            <div className="visual-note"><span className="note-icon">↗</span><span><b>Alur lebih terlihat</b><small>Ilustrasi antarmuka</small></span></div>
+            <div className="visual-note"><span className="note-icon">↗</span><span><b>BMS Web Portal</b><small>Tampilan aplikasi live</small></span></div>
             <div className="visual-side">BUILDING<br />OPERATIONS</div>
           </div>
         </div>
