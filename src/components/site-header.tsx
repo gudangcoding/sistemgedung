@@ -21,13 +21,13 @@ export function SiteHeader() {
           <Link href="/#faq">FAQ</Link>
           <a className="nav-demo" href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi <span aria-hidden="true">↗</span></a>
         </nav>
-        <Link className="button button-dark nav-cta" href="/demo">Diskusikan kebutuhan <span>↗</span></Link>
+        <Link className="button button-dark nav-cta" href="/demo#form-diskusi">Diskusikan kebutuhan <span>↗</span></Link>
         <details className="mobile-nav">
           <summary aria-label="Buka navigasi">☰</summary>
           <div className="mobile-menu">
             <a href={homeUrl}>Home</a><Link href="/layanan/software">Jasa aplikasi</Link><Link href="/#keunggulan">Keunggulan</Link><Link href="/#teknologi">Teknologi</Link>
             <Link href="/#proses">Proses</Link><Link href="/harga">Paket & harga</Link><Link href="/berita">Berita</Link>
-            <Link href="/#faq">FAQ</Link><Link href="/#aplikasi">Aplikasi SistemGedung</Link><Link href="/demo">Diskusikan kebutuhan</Link>
+            <Link href="/#faq">FAQ</Link><Link href="/#aplikasi">Aplikasi SistemGedung</Link><Link href="/demo#form-diskusi">Diskusikan kebutuhan</Link>
             <a href={demoAppUrl} target="_blank" rel="noopener noreferrer">Demo aplikasi ↗</a>
           </div>
         </details>

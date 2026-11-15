@@ -26,7 +26,7 @@ export function DemoForm({ initialPackage = "" }: { initialPackage?: string }) {
     }
   }
 
-  return <form className="demo-form" onSubmit={handleSubmit}>
+  return <form className="demo-form" id="form-diskusi" onSubmit={handleSubmit}>
     {submitted ? <div className="form-success" role="status"><span>✓</span><h2>Terima kasih.</h2><p>Formulir diterima untuk sesi ini. Belum ada tim atau kanal kontak yang terhubung, sehingga tindak lanjut belum dijadwalkan.</p><button className="text-link" type="button" onClick={() => setSubmitted(false)}>Kirim permintaan lain →</button></div> : <>
       <div className="form-heading"><span>FORMULIR DISKUSI</span><b>01 / 05</b></div>
       <label>Nama<input name="name" autoComplete="name" minLength={2} maxLength={100} required placeholder="Nama Anda" /></label>
