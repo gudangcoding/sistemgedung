@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AppShowcase } from "@/components/app-showcase";
 import { Eyebrow } from "@/components/eyebrow";
 import { serviceImages } from "@/lib/media";
 import {
@@ -15,7 +16,7 @@ import {
 const servicePath = "/layanan/software";
 const pageTitle = "Jasa Pembuatan Aplikasi Manajemen Gedung";
 const pageDescription =
-  "Jasa pembuatan aplikasi web dan mobile untuk manajemen gedung dan apartemen. Kelola tenant, IPL, keluhan, work order, aset, dan maintenance.";
+  "Jasa pembuatan aplikasi web dan mobile untuk manajemen gedung dan apartemen. BMS Web Portal untuk pengelola, BMS Support untuk tim lapangan, dan BMS Tenant untuk penghuni.";
 
 const faqs = [
   {
@@ -31,7 +32,7 @@ const faqs = [
   {
     question: "Apakah tersedia aplikasi web dan mobile?",
     answer:
-      "SistemGedung menyediakan aplikasi building management berbasis web serta aplikasi Android untuk kebutuhan tenant dan tim support. Aplikasi Android saat ini melalui closed testing, sehingga email tester perlu didaftarkan sebelum mengunduh dari Google Play.",
+      "SistemGedung menyediakan BMS Web Portal untuk pengelola gedung, BMS Support untuk tim engineering, housekeeping, dan security, serta BMS Tenant untuk penghuni. BMS Support dan BMS Tenant tersedia sebagai aplikasi Android melalui closed testing, sehingga email tester perlu didaftarkan sebelum mengunduh dari Google Play.",
   },
   {
     question: "Bagaimana menentukan biaya pembuatan atau implementasi aplikasi?",
@@ -64,9 +65,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: serviceImages.software,
-        width: 1200,
-        height: 630,
-        alt: "Jasa pembuatan aplikasi web dan mobile manajemen gedung SistemGedung",
+        width: 1600,
+        height: 893,
+        alt: "Tampilan BMS Web Portal untuk manajemen dan operasional gedung",
       },
     ],
   },
@@ -130,9 +131,9 @@ export default function SoftwareServicePage() {
           <div className="page-visual">
             <Image
               src={serviceImages.software}
-              alt="Ilustrasi aplikasi web building management untuk pengelola gedung dan apartemen"
-              width={1200}
-              height={630}
+              alt="Tampilan BMS Web Portal dengan modul tenancy, engineering, billing, akuntansi, operation, security, dan housekeeping"
+              width={1600}
+              height={893}
               sizes="(max-width: 1180px) 100vw, 1180px"
               priority
             />
@@ -169,6 +170,17 @@ export default function SoftwareServicePage() {
         </div>
       </section>
 
+      <section className="section app-download-section">
+        <div className="container">
+          <div className="section-heading">
+            <div><Eyebrow>TIGA APLIKASI TERHUBUNG</Eyebrow><h2>Web portal, tim lapangan,<br /><span>dan penghuni.</span></h2></div>
+            <p>Setiap peran mendapat antarmuka yang sesuai: pengelola memakai BMS Web Portal, tim operasional memakai BMS Support, dan penghuni memakai BMS Tenant.</p>
+          </div>
+          <AppShowcase />
+          <div className="app-download-help"><p><strong>Ingin mencoba sebelum memilih modul?</strong> Buka demo web portal atau daftarkan email tester untuk mengunduh BMS Support dan BMS Tenant lewat Google Play.</p><Link href="/demo">Daftarkan email uji coba <span>→</span></Link></div>
+        </div>
+      </section>
+
       <section className="section tech-section">
         <div className="container">
           <div className="section-heading">
@@ -177,12 +189,12 @@ export default function SoftwareServicePage() {
           </div>
           <div className="tech-grid">
             <article className="tech-card">
-              <span>Aplikasi web</span>
-              <p>Ruang kerja berbasis web untuk pengelola dan admin yang perlu meninjau data operasional gedung.</p>
+              <span>BMS Web Portal</span>
+              <p>Ruang kerja web untuk pengelola: tenancy, engineering, billing, akuntansi &amp; pajak, operation, security, dan housekeeping.</p>
             </article>
             <article className="tech-card">
-              <span>Aplikasi Android</span>
-              <p>Aplikasi tenant dan support tersedia untuk diuji melalui Google Play closed testing setelah email didaftarkan.</p>
+              <span>BMS Support &amp; BMS Tenant</span>
+              <p>Aplikasi Android untuk tim engineering, housekeeping, security, dan penghuni; diuji melalui Google Play closed testing setelah email didaftarkan.</p>
             </article>
             <article className="tech-card">
               <span>Setup &amp; white-label</span>

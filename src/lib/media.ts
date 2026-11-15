@@ -14,6 +14,7 @@ export const serviceImages = {
 } as const;
 
 export const appImages = {
+  webPortal: "/images/apps/web-portal.webp",
   support: "/images/apps/support-maintenance.webp",
   tenant: "/images/apps/tenant.webp",
 } as const;

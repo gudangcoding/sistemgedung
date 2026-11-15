@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Dukungan Operasional Gedung",
     description: "Diskusikan dukungan proses operasional, layanan tenant, pemeliharaan, dan koordinasi tim gedung.",
     url: "/layanan/operasional",
-    images: [{ url: serviceImages.operasional, width: 1200, height: 630, alt: "Dukungan operasional gedung SistemGedung" }],
+    images: [{ url: serviceImages.operasional, width: 1600, height: 893, alt: "BMS Support untuk tim engineering, housekeeping, dan security" }],
   },
 };
 
@@ -26,9 +26,9 @@ export default function OperationsServicePage() {
         <div className="page-visual">
           <Image
             src={serviceImages.operasional}
-            alt="Ilustrasi dukungan operasional dan koordinasi tim gedung"
-            width={1200}
-            height={630}
+            alt="Tampilan BMS Support untuk tim engineering, housekeeping, dan security di tablet maupun mobile"
+            width={1600}
+            height={893}
             sizes="(max-width: 1180px) 100vw, 1180px"
           />
         </div>

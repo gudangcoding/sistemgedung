@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Aplikasi Pengelolaan Gedung Perkantoran",
     description: "Pendekatan manajemen gedung perkantoran untuk layanan tenant, pekerjaan engineering, dan pemeliharaan aset.",
     url: "/solusi/perkantoran",
-    images: [{ url: solutionImages.perkantoran, width: 1200, height: 630, alt: "Solusi pengelolaan gedung perkantoran SistemGedung" }],
+    images: [{ url: solutionImages.perkantoran, width: 1600, height: 893, alt: "BMS Web Portal untuk pengelolaan gedung perkantoran" }],
   },
 };
 
@@ -26,9 +26,9 @@ export default function OfficePage() {
         <div className="page-visual">
           <Image
             src={solutionImages.perkantoran}
-            alt="Ilustrasi koordinasi work order dan pemeliharaan gedung perkantoran"
-            width={1200}
-            height={630}
+            alt="Tampilan BMS Web Portal dengan modul tenancy, engineering, billing, operation, security, dan housekeeping"
+            width={1600}
+            height={893}
             sizes="(max-width: 1180px) 100vw, 1180px"
           />
         </div>

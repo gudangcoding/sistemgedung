@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: pagePath,
-    images: [{ url: serviceImages.software, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: serviceImages.software, width: 1600, height: 893, alt: pageTitle }],
   },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: [serviceImages.software] },
 };

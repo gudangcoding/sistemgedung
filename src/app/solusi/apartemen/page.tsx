@@ -9,6 +9,8 @@ const page: FeatureLandingContent = {
   eyebrow: "SISTEM MANAJEMEN APARTEMEN",
   lead: "SistemGedung membantu pengelola apartemen menghubungkan data tenant dan unit, alur tagihan IPL, komunikasi keluhan, serta pekerjaan tim engineering. Tinjau aplikasi web dan portal yang tersedia, kemudian konfirmasi modul dan konfigurasi yang sesuai dengan proses pengelola.",
   intro: "Property management system apartemen perlu mengikuti pembagian tugas, aturan, dan kebutuhan layanan penghuni pada setiap properti.",
+  image: solutionImages.apartemen,
+  imageAlt: "Tampilan BMS Tenant untuk tagihan, pembayaran, deposit, profil unit, dan layanan penghuni apartemen",
   features: [
     { title: "Tenant dan unit", description: "Kelola konteks penghuni dan unit untuk mendukung administrasi serta tindak lanjut layanan." },
     { title: "IPL dan tagihan", description: "Bahas alur iuran pengelolaan, data yang diperlukan, verifikasi, dan format informasi bagi penghuni." },
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
     title: page.title,
     description: page.lead,
     url: page.path,
-    images: [{ url: solutionImages.apartemen, width: 1200, height: 630, alt: page.title }],
+    images: [{ url: solutionImages.apartemen, width: 1600, height: 893, alt: "BMS Tenant untuk layanan penghuni apartemen" }],
   },
   twitter: { card: "summary_large_image", title: page.title, description: page.lead, images: [solutionImages.apartemen] },
 };

@@ -14,6 +14,8 @@ export type FeatureLandingContent = {
   eyebrow: string;
   lead: string;
   intro: string;
+  image?: string;
+  imageAlt?: string;
   features: { title: string; description: string }[];
   process: { title: string; description: string }[];
   faqs: Faq[];
@@ -30,7 +32,7 @@ export function FeatureLandingPage({ content }: { content: FeatureLandingContent
     serviceType: content.serviceType,
     description: content.lead,
     url: `${siteOrigin}${content.path}`,
-    image: `${siteOrigin}${serviceImages.software}`,
+    image: `${siteOrigin}${content.image ?? serviceImages.software}`,
     provider: { "@id": `${siteOrigin}/#organization` },
     areaServed: { "@type": "Country", name: "Indonesia" },
     audience: { "@type": "BusinessAudience", audienceType: "Pengelola gedung dan apartemen" },
@@ -71,10 +73,10 @@ export function FeatureLandingPage({ content }: { content: FeatureLandingContent
           <p className="inner-lead">{content.lead}</p>
           <div className="page-visual">
             <Image
-              src={serviceImages.software}
-              alt={`${content.title} untuk operasional apartemen dan gedung`}
-              width={1200}
-              height={630}
+              src={content.image ?? serviceImages.software}
+              alt={content.imageAlt ?? `${content.title} untuk operasional apartemen dan gedung`}
+              width={1600}
+              height={893}
               sizes="(max-width: 1180px) 100vw, 1180px"
               priority
             />

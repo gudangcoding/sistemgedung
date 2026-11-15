@@ -22,7 +22,7 @@ export default function SolutionsPage() {
             <div className="solution-thumb">
               <Image
                 src={solutionImages.apartemen}
-                alt="Ilustrasi pengelolaan layanan penghuni apartemen"
+                alt="Tampilan aplikasi BMS Tenant untuk layanan penghuni apartemen"
                 fill
                 sizes="(max-width: 760px) 100vw, 50vw"
               />
@@ -36,7 +36,7 @@ export default function SolutionsPage() {
             <div className="solution-thumb">
               <Image
                 src={solutionImages.perkantoran}
-                alt="Ilustrasi pengelolaan operasional gedung perkantoran"
+                alt="Tampilan BMS Web Portal untuk pengelolaan operasional gedung perkantoran"
                 fill
                 sizes="(max-width: 760px) 100vw, 50vw"
               />
