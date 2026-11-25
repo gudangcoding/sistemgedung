@@ -39,7 +39,7 @@ Avoid paid link schemes, automated directory submissions, reciprocal link networ
 
 ## Keyword and content status
 
-Keyword phrases supplied by the owner are mapped across the service pages and evergreen news articles. Actual search volumes, ranking difficulty, and demand are **not verified**; validate them with Keyword Planner and Search Console after the site is indexed. Maintain natural language, useful detail, internal links, and accurate claims.
+Keyword phrases supplied by the owner are mapped across the service pages and evergreen news articles. Two dedicated landing pages target the apartment-management keyword cluster with separate intent: `/aplikasi-pengelolaan-apartemen` covers daily use by role and module, while `/software-pengelolaan-apartemen` covers evaluation criteria and implementation. Both have their own canonical URL, metadata, FAQ structured data, and cross-links to avoid competing with `/solusi/apartemen` for the same query. Actual search volumes, ranking difficulty, and demand are **not verified**; validate them with Keyword Planner and Search Console after the site is indexed. Maintain natural language, useful detail, internal links, and accurate claims.
 
 ## Official guidance
 

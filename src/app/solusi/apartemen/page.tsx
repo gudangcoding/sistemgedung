@@ -29,6 +29,8 @@ const page: FeatureLandingContent = {
     { question: "Apakah mendukung P3SRS dan kebijakan pengelola?", answer: "Kebutuhan pengguna dan alur persetujuan dapat dibahas bersama, tetapi keputusan dan tata kelola tetap menjadi kewenangan pihak pengelola atau organisasi terkait. Konfigurasi harus mengikuti aturan yang berlaku pada properti." },
   ],
   relatedLinks: [
+    { href: "/aplikasi-pengelolaan-apartemen", label: "Aplikasi pengelolaan apartemen" },
+    { href: "/software-pengelolaan-apartemen", label: "Software pengelolaan apartemen" },
     { href: "/fitur/tagihan-ipl-apartemen", label: "Aplikasi tagihan IPL apartemen" },
     { href: "/fitur/keluhan-penghuni-apartemen", label: "Sistem komunikasi keluhan penghuni" },
     { href: "/fitur/pencatatan-meter-gedung", label: "Software pencatatan meter utilitas" },

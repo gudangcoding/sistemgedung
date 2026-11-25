@@ -15,6 +15,8 @@ const staticPages: { path: string; priority: number; changeFrequency: MetadataRo
   { path: "/harga", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-04T08:00:00+07:00" },
   { path: "/solusi", priority: 0.8, changeFrequency: "monthly" },
   { path: "/solusi/apartemen", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-11-04T08:00:00+07:00" },
+  { path: "/aplikasi-pengelolaan-apartemen", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-25T08:00:00+07:00" },
+  { path: "/software-pengelolaan-apartemen", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-25T08:00:00+07:00" },
   { path: "/solusi/perkantoran", priority: 0.8, changeFrequency: "monthly" },
   { path: "/artikel", priority: 0.7, changeFrequency: "weekly" },
   { path: "/berita", priority: 0.8, changeFrequency: "weekly" },
