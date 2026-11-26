@@ -112,6 +112,40 @@ const techGroups = [
   { title: "Infrastruktur", items: ["Cloud hosting / VPS", "SSL & domain", "Deploy terkelola", "Update berkala"] },
 ];
 
+const bundleHighlights = [
+  {
+    title: "Aplikasi Mobile & Pembayaran",
+    items: [
+      "Mobile engineering untuk work order dan pemeliharaan",
+      "Mobile tenant untuk keluhan dan tagihan",
+      "Payment gateway terintegrasi (QRIS, VA, transfer bank)",
+    ],
+  },
+  {
+    title: "Modul Inti",
+    items: ["Tenancy", "Engineering", "Billing", "Akuntansi", "HRIS", "Security"],
+  },
+  {
+    title: "Modul Operasional",
+    items: [
+      "Housekeeping",
+      "Aset & vendor",
+      "Inventori & pengadaan",
+      "Arsip surat",
+      "Custom akses pengguna",
+    ],
+  },
+  {
+    title: "Multi-Site & Konsultan",
+    items: [
+      "Satu aplikasi untuk banyak site",
+      "Isolasi data per site",
+      "Hak akses per site dan peran",
+      "Cocok untuk konsultan pengelolaan gedung",
+    ],
+  },
+];
+
 const liveDemos = [
   { tag: "LIVE DEMO", title: "Building Management", text: "Kelola tenant, tagihan IPL, keluhan, aset, dan work order.", href: demoAppUrl, action: "Buka demo live", external: true },
   { tag: "DEMO PORTAL", title: "Demo Portal Tenant", text: "Lihat pengalaman penghuni mengirim keluhan dan memantau status.", href: "/portal/tenant", action: "Buka portal tenant" },
@@ -312,6 +346,18 @@ export default function HomePage() {
                 <p className="pricing-server">{plan.server}</p>
                 <ul>{plan.features.map((feature) => <li key={feature}><span aria-hidden="true">✓</span>{feature}</li>)}</ul>
                 <Link className="button button-dark pricing-cta" href={`/demo?paket=${plan.id}`}>Pilih Paket {plan.name}<span>↗</span></Link>
+              </article>
+            ))}
+          </div>
+          <div className="services-editorial bundle-details">
+            <div><Eyebrow>TERMASUK DALAM PAKET LENGKAP</Eyebrow><h3>Aplikasi, server, dan support untuk pengelolaan banyak site.</h3></div>
+            <p>Paket lengkap menggabungkan web portal, aplikasi mobile engineering dan tenant, VPS, serta pendampingan teknisi. Seluruh modul berjalan dalam satu sistem dengan akses dan isolasi data per site, dirancang untuk perusahaan konsultan pengelolaan gedung yang menangani banyak klien.</p>
+          </div>
+          <div className="tech-grid bundle-module-grid">
+            {bundleHighlights.map((group) => (
+              <article className="tech-card" key={group.title}>
+                <span>{group.title}</span>
+                <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
               </article>
             ))}
           </div>
